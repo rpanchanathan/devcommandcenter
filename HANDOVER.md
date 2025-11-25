@@ -6,7 +6,7 @@
 - Thread Context: Project portal + iTerm profiles setup
 
 ## Current Status
-Project Portal deployed to GitHub Pages. iTerm profiles working. **Pending: inline editing of Next Steps with Supabase persistence.**
+Project Portal deployed to GitHub Pages. iTerm profiles working. **Pending: inline editing of Next Steps via GitHub API.**
 
 ## Exact Position
 - ✅ iTerm dynamic profiles (14 projects, unique colors, clear on startup)
@@ -14,21 +14,22 @@ Project Portal deployed to GitHub Pages. iTerm profiles working. **Pending: inli
 - ✅ React dashboard with search, filters, project cards
 - ✅ GitHub Pages deployment with auto-deploy on push
 - ⏸️ Inline editing of Next Steps (user wants to edit on web, auto-persist)
-- ⏭️ Next: Add Supabase for Next Steps persistence + inline editing UI
+- ⏭️ Next: Add GitHub API integration to edit projects.ts from web UI
 
 ## Critical Context
-1. User wants to edit Next Steps directly on the portal (not projects.ts)
+1. User wants to edit Next Steps directly on the portal (not manually editing projects.ts)
 2. localStorage won't work across domains (localhost vs GitHub Pages)
-3. Need Supabase for real persistence that syncs everywhere
-4. URL scheme `iterm://` doesn't work reliably (osacompile bug) - using shell command instead
-5. ~/bin added to PATH in ~/.zshrc for `iterm` command
+3. Use GitHub API to commit edits to projects.ts → auto-deploy via Actions (~1 min)
+4. User is OUT of Supabase free tier - avoid new paid services
+5. URL scheme `iterm://` doesn't work reliably (osacompile bug) - using shell command instead
+6. ~/bin added to PATH in ~/.zshrc for `iterm` command
 
 ## Decisions Made
 - **Decision:** Use shell command `iterm <profile>` instead of URL scheme
   **Rationale:** AppleScript URL handlers via osacompile don't reliably receive `on open location` events
 
-- **Decision:** Store project data in projects.ts (source of truth) + Supabase (editable fields)
-  **Rationale:** User wants inline editing but also version control for core project info
+- **Decision:** Use GitHub API to edit projects.ts directly (not Supabase)
+  **Rationale:** Zero cost, version controlled, no new service, user out of Supabase free tier
 
 - **Decision:** GitHub Pages for hosting (rpanchanathan/devcommandcenter)
   **Rationale:** Free, auto-deploy, personal dashboard not GenWise product
@@ -48,4 +49,4 @@ Project Portal deployed to GitHub Pages. iTerm profiles working. **Pending: inli
 - Portal: https://rpanchanathan.github.io/devcommandcenter/
 
 ## Handover Prompt
-"Continue devcommandcenter project. Portal deployed at rpanchanathan.github.io/devcommandcenter. User wants inline editing of Next Steps on the web portal with auto-save to Supabase (not localStorage). Read HANDOVER.md in ~/code/devcommandcenter for context. Start by adding Supabase table for project_updates and edit UI."
+"Continue devcommandcenter project at ~/code/devcommandcenter. Portal live at rpanchanathan.github.io/devcommandcenter. Add inline editing of Next Steps using GitHub API to commit changes to projects.ts (NOT Supabase - user out of free tier). Flow: edit on web → GitHub API commits → Actions auto-deploys. Read HANDOVER.md for full context."
