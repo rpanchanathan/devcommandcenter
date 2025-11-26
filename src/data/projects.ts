@@ -257,7 +257,7 @@ export const projects: Project[] = [
   },
   {
     id: 'devcommandcenter',
-    name: 'Dev Command Center',
+    name: 'Command Center',
     status: 'Active',
     description: 'Personal project portal/dashboard. Tracks 15 projects with status, next steps, quick links. Inline editing via GitHub API.',
     lastTouched: '2025-11-26',
