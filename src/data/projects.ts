@@ -265,7 +265,7 @@ export const projects: Project[] = [
     prodUrl: 'https://rpanchanathan.github.io/devcommandcenter/',
     githubUrl: 'https://github.com/rpanchanathan/devcommandcenter',
     localPath: '/Users/rajeshpanchanathan/code/devcommandcenter',
-    itermProfile: 'devcommandcenter',
+    itermProfile: 'commandcenter',
     currentStatus: 'Live with inline editing. Edit Next Steps on web → commits to GitHub → auto-deploys.',
     nextSteps: [
       'Add Current Status inline editing',
