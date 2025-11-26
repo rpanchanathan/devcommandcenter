@@ -254,5 +254,27 @@ export const projects: Project[] = [
     recentDecisions: [
       'WordPress.com strips CSS - use GitHub Pages + iframe pattern instead (Nov 12, 2025)'
     ]
+  },
+  {
+    id: 'devcommandcenter',
+    name: 'Dev Command Center',
+    status: 'Active',
+    description: 'Personal project portal/dashboard. Tracks 15 projects with status, next steps, quick links. Inline editing via GitHub API.',
+    lastTouched: '2025-11-26',
+    techStack: ['React', 'TypeScript', 'Vite', 'GitHub API', 'GitHub Pages'],
+    prodUrl: 'https://rpanchanathan.github.io/devcommandcenter/',
+    githubUrl: 'https://github.com/rpanchanathan/devcommandcenter',
+    localPath: '/Users/rajeshpanchanathan/code/devcommandcenter',
+    itermProfile: 'devcommandcenter',
+    currentStatus: 'Live with inline editing. Edit Next Steps on web → commits to GitHub → auto-deploys.',
+    nextSteps: [
+      'Add Current Status inline editing',
+      'Add localStorage option for PAT persistence',
+      'Consider adding project reordering'
+    ],
+    recentDecisions: [
+      'GitHub API for edits instead of Supabase - zero cost, version controlled (Nov 25, 2025)',
+      'sessionStorage for PAT - security over convenience (Nov 25, 2025)'
+    ]
   }
 ];
