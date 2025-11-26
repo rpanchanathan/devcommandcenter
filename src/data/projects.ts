@@ -32,7 +32,8 @@ export const projects: Project[] = [
     nextSteps: [
       'Monitor parent submissions',
       'Add analytics dashboard',
-      'Optimize form validation UX'
+      'Optimize form validation UX',
+      'Confirm Insider Circle folks are treated correctly'
     ]
   },
   {
