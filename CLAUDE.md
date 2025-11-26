@@ -3,18 +3,23 @@
 ## What This Is
 Personal project portal/dashboard for tracking 14+ GenWise projects. Shows status, next steps, quick links to prod/GitHub/iTerm.
 
+## GitHub API Access
+- **Account**: rpanchanathan
+- **PAT**: See user-level `~/CLAUDE.md` (GitHub Access section)
+- **Scope**: repo
+- **Use**: Inline editing commits to projects.ts via web UI
+
 ## Architecture
 
 ### Stack
 - React 18 + TypeScript + Vite
 - Tailwind CSS (dark theme)
 - GitHub Pages hosting (free)
-- Supabase for editable fields (pending)
+- GitHub API for inline editing (no backend needed)
 
 ### Data Model
 - `src/data/projects.ts` - Source of truth for project metadata
-- Supabase `project_updates` table - Editable fields (nextSteps, currentStatus)
-- Merge at runtime: static data + Supabase overrides
+- Edits via web UI commit directly to GitHub → auto-deploy
 
 ### Deployment
 - Auto-deploy on push to main via GitHub Actions
@@ -33,11 +38,9 @@ Personal project portal/dashboard for tracking 14+ GenWise projects. Shows statu
 2. Add iTerm profile to `genwise-projects.json`
 3. Push to trigger deploy
 
-### Update Next Steps (Current - Manual)
-1. Edit `src/data/projects.ts`
-2. `git add -A && git commit -m "Update" && git push`
-
-### Update Next Steps (Planned - Web UI)
-1. Edit on portal directly
-2. Auto-saves to Supabase
-3. No deploy needed
+### Update Next Steps (Web UI)
+1. Go to project detail page
+2. Click Edit in Next Steps section
+3. Enter PAT if prompted (see GitHub API Access above)
+4. Modify steps → Save
+5. Auto-commits to GitHub → deploys in ~1 min
