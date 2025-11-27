@@ -30,10 +30,10 @@ export const projects: Project[] = [
     itermProfile: 'post-sales',
     currentStatus: 'Production ready. Multi-tab forms, document uploads working. Payment integration complete.',
     nextSteps: [
-      'Monitor parent submissions',
-      'Add analytics dashboard',
-      'Optimize form validation UX',
-      'Confirm Insider Circle folks are treated correctly'
+      'Wait for trial/test parents to share portal experience',
+      'Augment "Support a Child" tab - waiting for Eklavya collateral - enable payment button linked with RazorPay, modify suggested amounts',
+      'Wait for Admin Portal feedback',
+      'Build out "Digital Archive" tab'
     ]
   },
   {
