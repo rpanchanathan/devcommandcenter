@@ -44,18 +44,17 @@ export const projects: Project[] = [
     id: 'pre-sales',
     name: 'Pre-Sales Monitoring',
     status: 'Active',
-    description: 'Lead tracking dashboard. Google Forms → Sheets aggregation, status tracking, owner assignments.',
-    lastTouched: '2025-10-19',
-    techStack: ['Node.js', 'Express', 'Google Sheets API', 'PM2'],
+    description: 'GSP26 lead pipeline: Google Forms → Master Sheet → FreshSales CRM sync with Slack notifications.',
+    lastTouched: '2025-12-03',
+    techStack: ['Node.js', 'Google Sheets API', 'FreshSales API', 'Google Apps Script', 'PM2'],
     prodUrl: 'https://dashboard.giftedworld.org',
     githubUrl: 'https://github.com/GenWise/pre-sales-monitoring',
     localPath: '/Users/rajeshpanchanathan/code/pre-sales-monitoring',
     itermProfile: 'pre-sales',
-    currentStatus: 'Stable in production. Dashboard shows lead status across multiple Google Forms sources.',
+    currentStatus: 'Production stable. Hourly CRM sync, form-bound scripts for 4 forms, Slack notifications (noise reduced).',
     nextSteps: [
-      'Add email notifications for new leads',
-      'Implement lead scoring',
-      'Create conversion funnel view'
+      'Monitor Slack channel for reduced noise',
+      'Add daily digest summary option'
     ]
   },
   {
