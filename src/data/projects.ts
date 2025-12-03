@@ -22,18 +22,22 @@ export const projects: Project[] = [
     name: 'Post-Sales Portal',
     status: 'Active',
     description: 'Parent portal for GSP 2025 - multi-tab forms, document uploads, payment integration, CRM sync.',
-    lastTouched: '2025-11-25',
+    lastTouched: '2025-12-03',
     techStack: ['React', 'TypeScript', 'Supabase', 'GCP Cloud Run'],
-    prodUrl: 'https://post-sales.genwise.in',
+    prodUrl: 'https://parent.genwise.in',
     githubUrl: 'https://github.com/rpanchanathan/genwise-post-sales-portal',
     localPath: '/Users/rajeshpanchanathan/code/post-sales',
     itermProfile: 'post-sales',
-    currentStatus: 'Production ready. Multi-tab forms, document uploads working. Payment integration complete.',
+    currentStatus: 'Course name bug RESOLVED. Webhook now uses deal.products[0].name. 4 students fixed. Cloud Scheduler paused.',
     nextSteps: [
+      'Manual sync available: npx tsx scripts/sync-course-names.ts --fix',
       'Wait for trial/test parents to share portal experience',
-      'Augment "Support a Child" tab - waiting for Eklavya collateral - enable payment button linked with RazorPay, modify suggested amounts',
-      'Wait for Admin Portal feedback',
+      'Augment "Support a Child" tab - waiting for Eklavya collateral',
       'Build out "Digital Archive" tab'
+    ],
+    recentDecisions: [
+      'Course names from products[0].name, not custom fields (Dec 3, 2025)',
+      'Cloud Scheduler paused - root cause fixed, nightly sync unnecessary'
     ]
   },
   {
