@@ -279,5 +279,27 @@ export const projects: Project[] = [
       'GitHub API for edits instead of Supabase - zero cost, version controlled (Nov 25, 2025)',
       'sessionStorage for PAT - security over convenience (Nov 25, 2025)'
     ]
+  },
+  {
+    id: 'chimplyfun',
+    name: 'Chimply Fun Website',
+    status: 'Active',
+    description: 'Preschool website. Nature-friendly, Waldorf/Montessori-inspired. GitHub Pages hosting with Cloudflare DNS.',
+    lastTouched: '2025-12-03',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'Cloudflare'],
+    prodUrl: 'https://chimplyfun.com',
+    githubUrl: 'https://github.com/chimplyfun/website',
+    localPath: '/Users/rajeshpanchanathan/code/chimplyfun/website',
+    itermProfile: 'chimplyfun',
+    currentStatus: 'Live on chimplyfun.com. DNS via Cloudflare, SSL working, GitHub Pages auto-deploys.',
+    nextSteps: [
+      'Content updates as needed',
+      'Add contact form functionality',
+      'SEO optimization'
+    ],
+    recentDecisions: [
+      'Cloudflare DNS over GoDaddy - avoids locked forwarding records, full control (Dec 3, 2025)',
+      'GitHub Pages over custom hosting - simple, free, auto-deploys on push'
+    ]
   }
 ];
