@@ -242,19 +242,20 @@ export const projects: Project[] = [
     id: 'websites',
     name: 'Websites / Static Pages',
     status: 'Active',
-    description: 'Static pages (TNP365, etc.) hosted via GitHub Pages + WordPress iframe.',
-    lastTouched: '2025-11-12',
-    techStack: ['HTML', 'CSS', 'GitHub Pages'],
-    prodUrl: 'https://genwise.github.io/static-pages',
-    githubUrl: 'https://github.com/genwise/websites',
-    localPath: '/Users/rajeshpanchanathan/code/websites',
+    description: 'Static pages (TNP365, etc.) hosted via GitHub Pages + WordPress iframe. Includes form submission API.',
+    lastTouched: '2025-12-04',
+    techStack: ['HTML', 'CSS', 'GitHub Pages', 'Python', 'Flask', 'SMTP2GO'],
+    prodUrl: 'https://genwise.in/tnp365',
+    githubUrl: 'https://github.com/GenWise/static-pages',
+    localPath: '/Users/rajeshpanchanathan/code/websites/static-pages',
     itermProfile: 'websites',
-    currentStatus: 'TNP365 page deployed. GitHub Pages + WordPress iframe pattern working.',
+    currentStatus: 'TNP365 form now auto-sends emails via SMTP2GO API (no more mailto). API at tnp-form.genwise.in on DO droplet.',
     nextSteps: [
-      'Add more static pages as needed',
-      'Document the deployment pattern'
+      'Monitor form submissions in siddharth@genwise.in inbox',
+      'Add more static pages as needed'
     ],
     recentDecisions: [
+      'Form API on DO droplet + SMTP2GO instead of mailto - reliable delivery (Dec 4, 2025)',
       'WordPress.com strips CSS - use GitHub Pages + iframe pattern instead (Nov 12, 2025)'
     ]
   },
