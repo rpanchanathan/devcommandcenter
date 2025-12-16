@@ -195,6 +195,27 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 'resume-screening',
+    name: 'Resume Screening',
+    status: 'Active',
+    description: 'SKCH teacher recruitment screening tool. Vision API extraction, AI scoring, Sonnet narratives, batch processing.',
+    lastTouched: '2025-12-16',
+    techStack: ['Python', 'Streamlit', 'Claude API', 'SQLite', 'Digital Ocean'],
+    prodUrl: 'https://skchscreen.genwise.in',
+    localPath: '/Users/rajeshpanchanathan/code/skch/resume_processing',
+    itermProfile: 'resume-screening',
+    currentStatus: 'Live on DO. 129 candidates processed. Sonnet uses pre_computed as authoritative source, multi-board awareness.',
+    nextSteps: [
+      'Supplement missing form fields from Vision CV',
+      'Monitor Sonnet narrative accuracy',
+      'Export to Excel with hyperlinks working'
+    ],
+    recentDecisions: [
+      'pre_computed is authoritative source for Sonnet - no recalculating tenures (Dec 16, 2025)',
+      'Multi-board awareness: CBSE, ICSE, State (PUC/SSLC) - evaluate against applied board (Dec 16, 2025)'
+    ]
+  },
+  {
     id: 'schoolname',
     name: 'School Name Normalization',
     status: 'Dormant',
