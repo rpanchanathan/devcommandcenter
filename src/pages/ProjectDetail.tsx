@@ -200,6 +200,14 @@ export function ProjectDetail() {
           </div>
         </div>
 
+        {/* About Section */}
+        {project.detailedDescription && (
+          <div className="mb-8 bg-[#161b22] border border-gray-800 rounded-lg p-6">
+            <h2 className="text-gray-100 mb-3">About</h2>
+            <p className="text-gray-300 leading-relaxed whitespace-pre-line">{project.detailedDescription}</p>
+          </div>
+        )}
+
         {/* Current Status Section */}
         <div className="mb-8 bg-[#161b22] border border-gray-800 rounded-lg p-6">
           <h2 className="text-gray-100 mb-3">Current Status</h2>

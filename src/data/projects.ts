@@ -5,6 +5,7 @@ export interface Project {
   name: string;
   status: ProjectStatus;
   description: string;
+  detailedDescription?: string;
   lastTouched: string;
   techStack: string[];
   prodUrl?: string;
@@ -22,6 +23,11 @@ export const projects: Project[] = [
     name: 'Post-Sales Portal',
     status: 'Active',
     description: 'Parent portal for GSP 2025 - multi-tab forms, document uploads, payment integration, CRM sync.',
+    detailedDescription: `A comprehensive parent portal that serves as the primary touchpoint for GenWise Summer Program families after enrollment. Parents access personalized dashboards showing their child's course details, batch schedules, and program information.
+
+The portal handles the complete post-enrollment journey: document collection (ID proofs, medical forms), payment tracking with Razorpay integration, and real-time sync with FreshSales CRM. A webhook system automatically updates parent records when deals close, ensuring data consistency across systems.
+
+Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, and automated email notifications for key milestones.`,
     lastTouched: '2025-12-03',
     techStack: ['React', 'TypeScript', 'Supabase', 'GCP Cloud Run'],
     prodUrl: 'https://parent.genwise.in',
@@ -45,6 +51,11 @@ export const projects: Project[] = [
     name: 'Pre-Sales Monitoring',
     status: 'Active',
     description: 'GSP26 lead pipeline: Google Forms → Master Sheet → FreshSales CRM sync with Slack notifications.',
+    detailedDescription: `An automated lead management pipeline that captures inquiries from multiple Google Forms (website, WhatsApp, referrals) and funnels them into a unified sales workflow.
+
+Form submissions trigger Google Apps Scripts that normalize data and append to a Master Google Sheet. A Node.js service running on Digital Ocean (via PM2) performs hourly syncs to FreshSales CRM, creating contacts and deals with proper lifecycle stages. Slack notifications alert the sales team of new leads in real-time.
+
+The system includes duplicate detection, lead source attribution, and automatic field mapping. A dashboard at dashboard.giftedworld.org provides visibility into pipeline health and conversion metrics.`,
     lastTouched: '2025-12-03',
     techStack: ['Node.js', 'Google Sheets API', 'FreshSales API', 'Google Apps Script', 'PM2'],
     prodUrl: 'https://dashboard.giftedworld.org',
@@ -62,6 +73,11 @@ export const projects: Project[] = [
     name: 'PV Reviews',
     status: 'Active',
     description: 'Google Reviews automation for Paati Veedu restaurant. Scrapes reviews, generates AI responses, posts to GMB.',
+    detailedDescription: `An automated reputation management system for Paati Veedu, a family restaurant. The system monitors Google Business Profile for new reviews and generates contextually appropriate AI responses.
+
+A Python script runs on Digital Ocean cron, scraping new reviews via unofficial GMB APIs. Each review is analyzed for sentiment and key themes (food quality, service, ambiance). Claude API generates personalized responses that acknowledge specific feedback while maintaining the restaurant's warm, family-oriented voice.
+
+Responses are queued for human approval via email (SMTP2GO), then auto-posted to Google. Review data is stored in Supabase for trend analysis. The system has handled 200+ reviews with consistent 4.5+ star maintenance.`,
     lastTouched: '2025-11-20',
     techStack: ['Python', 'Supabase', 'Claude API', 'SMTP2GO'],
     githubUrl: 'https://github.com/rpanchanathan/PV_Reviews',
@@ -79,6 +95,11 @@ export const projects: Project[] = [
     name: 'Zoom Extraction System',
     status: 'Maintenance',
     description: 'Automated Zoom recording extraction from 4 accounts. Downloads videos, transcripts, AI summaries to Google Drive.',
+    detailedDescription: `A multi-account Zoom recording archival system that automatically extracts, processes, and organizes meeting recordings for GenWise's educational programs.
+
+The system monitors 4 Zoom accounts (different program leads) via Zoom API, detecting new cloud recordings. Videos and auto-generated transcripts are downloaded, then processed through Claude API to generate structured summaries with key discussion points, action items, and participant insights.
+
+All assets are uploaded to organized Google Drive folders with consistent naming conventions. A daily cron job on Digital Ocean handles the extraction pipeline, with email notifications for failures. The archive serves as institutional memory for program reviews and parent communications.`,
     lastTouched: '2025-11-09',
     techStack: ['Python', 'Zoom API', 'Google Drive API', 'Claude API'],
     githubUrl: 'https://github.com/GenWise/zoom-extraction-system',
@@ -98,6 +119,11 @@ export const projects: Project[] = [
     name: 'EI ATS Status',
     status: 'Active',
     description: 'EI ATS registration dashboard. Scrapes source daily, shows registration metrics.',
+    detailedDescription: `A monitoring dashboard that tracks registration status for Eklavya India's Admission Test Series (ATS), providing real-time visibility into enrollment numbers across test centers.
+
+The Node.js service scrapes the official EI ATS registration portal daily, extracting seat availability, registration counts by center, and capacity utilization. Data is cached in JSON files for fast dashboard rendering, with historical snapshots enabling trend analysis.
+
+The Express-based dashboard at internalapps.giftedworld.org displays key metrics with color-coded capacity indicators. GenWise uses this to time their promotional campaigns around registration windows and identify high-demand centers for targeted outreach.`,
     lastTouched: '2025-11-15',
     techStack: ['Node.js', 'Express', 'JSON cache', 'PM2'],
     prodUrl: 'https://internalapps.giftedworld.org/ei-ats',
@@ -115,6 +141,11 @@ export const projects: Project[] = [
     name: 'GSP26 Chatbot',
     status: 'Active',
     description: 'RAG chatbot for GSP 2026 inquiries. Claude 200K context, no vector DB.',
+    detailedDescription: `An AI-powered chatbot that answers parent inquiries about GenWise Summer Program 2026, embedded directly on the program landing page at genwise.in.
+
+Unlike traditional RAG systems, this chatbot leverages Claude's 200K context window to load the entire program knowledge base (FAQs, schedules, pricing, policies) in a single prompt. This eliminates vector database complexity while ensuring accurate, contextual responses.
+
+The FastAPI backend runs on GCP Cloud Run with auto-scaling. The chat widget is embedded in WordPress via iframe, styled to match the GenWise brand. Conversations are logged for analysis, helping identify common parent concerns and content gaps. The bot handles 50+ daily inquiries during peak enrollment season.`,
     lastTouched: '2025-11-20',
     techStack: ['Python', 'FastAPI', 'Claude API', 'GCP Cloud Run'],
     prodUrl: 'https://genwise.in/gsp-2026-may',
@@ -132,6 +163,11 @@ export const projects: Project[] = [
     name: 'Bridge System App',
     status: 'Active',
     description: 'Interactive workspace for bridge partnerships to build bidding systems. Visual tables, hyperlinks.',
+    detailedDescription: `A specialized tool for contract bridge players to document and share their bidding systems with partners. Bridge partnerships develop complex agreements about what each bid means - this app makes those systems navigable and maintainable.
+
+The interface presents bidding sequences as interactive tables where each cell can contain explanations, exceptions, and hyperlinks to related sequences. IndexedDB (via Dexie) provides offline-first storage, ensuring systems are available during tournaments without internet.
+
+Built with React/TypeScript and Vite for fast development. The app supports multiple system documents, import/export functionality, and a clean print layout for reference cards. Designed for serious bridge players who need more than spreadsheets but less than full convention card software.`,
     lastTouched: '2025-11-24',
     techStack: ['React', 'TypeScript', 'IndexedDB (Dexie)', 'Vite'],
     githubUrl: 'https://github.com/rpanchanathan/bridge-system-app',
@@ -149,6 +185,11 @@ export const projects: Project[] = [
     name: 'Faces Recognition',
     status: 'Maintenance',
     description: 'Face detection/recognition for photo organization. 4,713 embeddings, clustering UI.',
+    detailedDescription: `A photo organization tool that uses facial recognition to automatically group photos by person, making it easy to find and organize family/event photos across large collections.
+
+The Python backend uses the face_recognition library (built on dlib) to detect faces and generate 128-dimensional embeddings. These embeddings are stored in SQLite for fast similarity searches. A clustering algorithm groups similar faces, suggesting which photos contain the same person.
+
+A React UI displays face clusters for manual review and naming. Once faces are labeled, users can search for photos by person name or export organized albums. Currently processing 4,713 face embeddings from family photo archives, with room to scale to larger collections.`,
     lastTouched: '2025-10-15',
     techStack: ['Python', 'SQLite', 'face_recognition', 'React'],
     githubUrl: 'https://github.com/GenWise/faces',
@@ -166,6 +207,11 @@ export const projects: Project[] = [
     name: 'YouTube MCP',
     status: 'Active',
     description: 'MCP server for YouTube uploads from Google Drive. Dual-auth, Whisper transcription.',
+    detailedDescription: `A Model Context Protocol (MCP) server that enables Claude to upload videos from Google Drive Shared Drives to YouTube, with automatic transcription and chapter generation.
+
+The server implements dual authentication: OAuth 2.0 for YouTube Data API (upload permissions) and Service Account for Google Drive API (access to Shared Drives). This allows uploading videos from team drives without requiring individual user consent for each file.
+
+OpenAI Whisper integration automatically transcribes uploaded videos, generating accurate timestamps. These are formatted as YouTube chapters and appended to video descriptions. The MCP interface allows natural language commands like "upload the March workshop recording to the GenWise channel with chapters."`,
     lastTouched: '2025-11-22',
     techStack: ['TypeScript', 'MCP', 'YouTube API', 'OpenAI Whisper'],
     localPath: '/Users/rajeshpanchanathan/code/youtube-mcp',
@@ -185,6 +231,11 @@ export const projects: Project[] = [
     name: 'SKCH Resumes',
     status: 'Dormant',
     description: 'Resume processing for SKCH teacher recruitment. Vision API extraction, 469 resumes.',
+    detailedDescription: `The original batch processing pipeline that extracted structured data from 469 teacher resumes for Sri Kumaran Children's Home recruitment. This was the data extraction phase before the screening tool was built.
+
+Google Vision API processed PDF resumes, extracting text with OCR for scanned documents. Custom regex patterns identified degrees, teaching experience, schools worked, and certifications. Results were stored in SQLite with evidence spans for verification.
+
+This phase established the canonical data model (schools, colleges, qualifications) and identified extraction challenges (table parsing, date ambiguity) that informed the Vision API hybrid approach in the screening tool.`,
     lastTouched: '2025-09-30',
     techStack: ['Python', 'Google Vision API', 'SQLite'],
     localPath: '/Users/rajeshpanchanathan/code/skch',
@@ -199,6 +250,11 @@ export const projects: Project[] = [
     name: 'Resume Screening',
     status: 'Active',
     description: 'SKCH teacher recruitment screening tool. Vision API extraction, AI scoring, Sonnet narratives, batch processing.',
+    detailedDescription: `An evidence-based teacher recruitment screening system for Sri Kumaran Children's Home (SKCH), one of Bangalore's top K-12 schools. The tool processes application forms and CVs to generate ranked candidate recommendations with AI-powered narratives.
+
+The pipeline uses Claude Vision API for structured extraction from forms (qualifications, experience, salary expectations) and CVs (detailed work history, credentials). A scoring engine evaluates candidates on subject match, B.Ed qualification, CBSE experience, school quality, and location proximity to SKCH campuses.
+
+Claude Sonnet generates professional 3-4 line narratives for each candidate, highlighting strengths and concerns. The Streamlit interface supports batch processing, human review workflows, and Excel export with hyperlinks. Multi-board awareness ensures candidates are evaluated against their applied board (CBSE, ICSE, or State), not assumed defaults.`,
     lastTouched: '2025-12-16',
     techStack: ['Python', 'Streamlit', 'Claude API', 'SQLite', 'Digital Ocean'],
     prodUrl: 'https://skchscreen.genwise.in',
@@ -220,6 +276,11 @@ export const projects: Project[] = [
     name: 'School Name Normalization',
     status: 'Dormant',
     description: 'School name normalization. Maps 1,146 schools to 32 groups for alumni pages.',
+    detailedDescription: `A data cleaning utility that normalizes inconsistent school name entries from alumni databases into canonical groups for display on GenWise's alumni pages.
+
+Alumni self-report their schools in free-text fields, resulting in variations like "DPS Bangalore", "Delhi Public School, B'lore", "DPS BLR". This tool uses fuzzy matching and manual mapping rules to consolidate 1,146 unique entries into 32 recognized school groups.
+
+The output feeds into alumni directory pages, enabling filtering and grouping by school. The mapping rules and canonical names are maintained in CSV/Excel for easy updates as new variations appear.`,
     lastTouched: '2025-09-15',
     techStack: ['Python', 'pandas', 'CSV/Excel'],
     localPath: '/Users/rajeshpanchanathan/code/schoolname',
@@ -234,6 +295,11 @@ export const projects: Project[] = [
     name: 'myCliniq',
     status: 'Dormant',
     description: 'Health profile management. Document uploads, React frontend.',
+    detailedDescription: `A personal health records management application designed to centralize medical documents, prescriptions, and health metrics in one accessible interface.
+
+The React frontend provides a clean dashboard for viewing health timelines, uploading documents (lab reports, prescriptions, imaging), and tracking vitals. The goal was to give users a "medical passport" they could share with new doctors or access during emergencies.
+
+Development paused while evaluating market fit and privacy requirements. The local prototype demonstrates core document management features but lacks backend persistence and sharing capabilities.`,
     lastTouched: '2025-08-01',
     techStack: ['React', 'Node.js'],
     localPath: '/Users/rajeshpanchanathan/code/myCliniq',
@@ -249,6 +315,11 @@ export const projects: Project[] = [
     name: 'Obsidian Integration',
     status: 'Maintenance',
     description: 'Credential extraction from Obsidian/Notes. Generates grouped credential dashboard.',
+    detailedDescription: `A utility that extracts and organizes API keys, passwords, and service credentials scattered across Obsidian notes into a structured, searchable dashboard.
+
+The Python script parses markdown files from an Obsidian vault, identifying credential patterns (API keys, tokens, passwords) using regex and contextual hints. Extracted credentials are grouped by service/category and output as a JSON structure for the dashboard.
+
+The tool solves the "where did I put that API key?" problem without requiring a dedicated password manager for development credentials. Currently used to maintain a personal credential inventory with ~50 services tracked.`,
     lastTouched: '2025-10-20',
     techStack: ['Python', 'JSON'],
     localPath: '/Users/rajeshpanchanathan/code/obsidian_integration',
@@ -264,6 +335,11 @@ export const projects: Project[] = [
     name: 'Websites / Static Pages',
     status: 'Active',
     description: 'Static pages (TNP365, etc.) hosted via GitHub Pages + WordPress iframe. Includes form submission API.',
+    detailedDescription: `A collection of standalone web pages that integrate with GenWise's WordPress.com site via iframe embedding, bypassing WordPress.com's CSS limitations while maintaining brand consistency.
+
+The pattern emerged from WordPress.com's aggressive CSS stripping on direct HTML posts. Static pages are developed locally with full styling control, pushed to GitHub Pages for hosting, then embedded in WordPress pages via iframe. This achieves pixel-perfect Figma designs without WordPress Business plan costs.
+
+Includes TNP365 landing page with a Flask-based form submission API on Digital Ocean. Forms submit to the API, which sends emails via SMTP2GO (bypassing DO's SMTP port blocking) and logs submissions. The architecture supports adding new pages without WordPress constraints.`,
     lastTouched: '2025-12-04',
     techStack: ['HTML', 'CSS', 'GitHub Pages', 'Python', 'Flask', 'SMTP2GO'],
     prodUrl: 'https://genwise.in/tnp365',
@@ -285,6 +361,11 @@ export const projects: Project[] = [
     name: 'Command Center',
     status: 'Active',
     description: 'Personal project portal/dashboard. Tracks 15 projects with status, next steps, quick links. Inline editing via GitHub API.',
+    detailedDescription: `A personal project management dashboard that provides a single-pane view of all active development projects, their status, and next actions. Think of it as a developer's portfolio meets task tracker.
+
+Each project card displays status (Active/Maintenance/Dormant), tech stack, quick links (Production, GitHub, local path), current status summary, and next steps. The detail view adds recent architectural decisions and an "About" section explaining what the project does.
+
+The killer feature is inline editing: update Next Steps directly on the web, which commits changes to GitHub via API, triggering auto-deployment. No local edits needed for task updates. Built with React/TypeScript, hosted free on GitHub Pages.`,
     lastTouched: '2025-11-26',
     techStack: ['React', 'TypeScript', 'Vite', 'GitHub API', 'GitHub Pages'],
     prodUrl: 'https://rpanchanathan.github.io/devcommandcenter/',
@@ -307,6 +388,11 @@ export const projects: Project[] = [
     name: 'Chimply Fun Website',
     status: 'Active',
     description: 'Preschool website. Nature-friendly, Waldorf/Montessori-inspired. GitHub Pages hosting with Cloudflare DNS.',
+    detailedDescription: `A marketing website for Chimply Fun, a nature-focused preschool inspired by Waldorf and Montessori philosophies. The design emphasizes organic shapes, earthy colors, and imagery of children learning through nature exploration.
+
+The site is built with pure HTML/CSS/JavaScript for simplicity and fast loading. Hosted on GitHub Pages with Cloudflare handling DNS and SSL. The Cloudflare setup was chosen over GoDaddy's DNS to avoid locked forwarding records that prevented proper subdomain configuration.
+
+Content includes program philosophy, daily schedule, admissions process, and photo galleries. The simple tech stack means updates are straightforward: edit HTML, push to GitHub, auto-deploys in seconds.`,
     lastTouched: '2025-12-03',
     techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'Cloudflare'],
     prodUrl: 'https://chimplyfun.com',
