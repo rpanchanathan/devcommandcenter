@@ -409,5 +409,31 @@ Content includes program philosophy, daily schedule, admissions process, and pho
       'Cloudflare DNS over GoDaddy - avoids locked forwarding records, full control (Dec 3, 2025)',
       'GitHub Pages over custom hosting - simple, free, auto-deploys on push'
     ]
+  },
+  {
+    id: 'teacherhire-demo',
+    name: 'TeacherHire Demo',
+    status: 'Active',
+    description: 'Demo version of teacher screening app for sales demos. Rebranded, 12 sample candidates.',
+    detailedDescription: `A demonstration version of the SKCH teacher screening tool, rebranded for generic "Teacher Screening" use cases. Built for sales demos to showcase AI-powered candidate evaluation without exposing actual SKCH data.
+
+The demo runs at teacherhire.genwise.in with 12 hand-picked candidates from the 2026 batch across 6 subjects (Biology, Chemistry, Math, Physics, English, Hindi). Each candidate has complete data: application forms, CVs, AI-generated narratives, qualification extraction, and school history.
+
+Modified candidate_chat.py to handle the upload filename pattern (Name-hash.pdf) used by batch uploads. Hosted on the same DO droplet as production but with separate systemd service (port 8502) and nginx config.`,
+    lastTouched: '2025-12-24',
+    techStack: ['Python', 'Streamlit', 'Claude API', 'Digital Ocean'],
+    prodUrl: 'https://teacherhire.genwise.in',
+    githubUrl: 'https://github.com/GenWise/teacherhire-demo',
+    localPath: '/Users/rajeshpanchanathan/code/skch/teacherhire-demo',
+    itermProfile: 'teacherhire-demo',
+    currentStatus: 'Live demo with 12 candidates. Form/CV links working, Quals/Schools displaying.',
+    nextSteps: [
+      'Test demo flow before sales call',
+      'Add more candidates if needed'
+    ],
+    recentDecisions: [
+      'Separate repo from production SKCH to avoid confusion (Dec 24, 2025)',
+      'Modified candidate_chat.py for upload filename pattern (Name-hash.pdf)'
+    ]
   }
 ];
