@@ -292,22 +292,49 @@ The output feeds into alumni directory pages, enabling filtering and grouping by
   },
   {
     id: 'mycliniq',
-    name: 'myCliniq',
-    status: 'Dormant',
-    description: 'Health profile management. Document uploads, React frontend.',
-    detailedDescription: `A personal health records management application designed to centralize medical documents, prescriptions, and health metrics in one accessible interface.
+    name: 'MyCliniQ',
+    status: 'Active',
+    description: 'Telemedicine platform with patient/doctor dashboards, appointments, prescriptions. Deployed on Cloud Run + Cloudflare Pages + Turso.',
+    detailedDescription: `A comprehensive telemedicine platform enabling patients to book video/audio consultations with doctors, manage health records, and track prescriptions. Built as a full-stack application with role-based dashboards.
 
-The React frontend provides a clean dashboard for viewing health timelines, uploading documents (lab reports, prescriptions, imaging), and tracking vitals. The goal was to give users a "medical passport" they could share with new doctors or access during emergencies.
+**Architecture:**
+- Frontend: React + TypeScript + Tailwind + shadcn/ui on Cloudflare Pages
+- Backend: Express + Prisma on GCP Cloud Run (asia-south1)
+- Database: Turso (SQLite-compatible edge database)
+- Auth: JWT tokens with bcrypt password hashing
 
-Development paused while evaluating market fit and privacy requirements. The local prototype demonstrates core document management features but lacks backend persistence and sharing capabilities.`,
-    lastTouched: '2025-08-01',
-    techStack: ['React', 'Node.js'],
+**Working Features:**
+- Patient dashboard with health score, quick actions, upcoming appointments
+- Doctor dashboard with patient list, consultation workflow
+- Appointment booking with date/time selection
+- Family member management (add dependents, book for family)
+- Login/register with role selection (Patient/Doctor)
+
+**Key Tables:** users, doctor_profiles, patient_profiles, appointments, prescriptions, documents, family_members, lab_tests, notifications
+
+**Deployment Commands:**
+- Backend: gcloud run deploy mycliniq-backend --source backend --region asia-south1
+- Frontend: npx wrangler pages deploy dist --project-name=mycliniq-frontend
+- Seed DB: node backend/seed-turso.js (with TURSO env vars)`,
+    lastTouched: '2025-12-28',
+    techStack: ['React', 'TypeScript', 'Express', 'Prisma', 'Turso', 'GCP Cloud Run', 'Cloudflare Pages', 'Tailwind'],
+    prodUrl: 'https://mycliniq-frontend.pages.dev',
     localPath: '/Users/rajeshpanchanathan/code/myCliniq',
     itermProfile: 'mycliniq',
-    currentStatus: 'Development stalled. Local frontend exists.',
+    currentStatus: 'Production deployed. Login + patient dashboard + appointments working. Document upload broken (needs cloud storage). Video consultations not implemented.',
     nextSteps: [
-      'Evaluate if project should continue',
-      'Define MVP requirements if yes'
+      'Phase 1: Fix document upload (switch multer disk → Cloudflare R2)',
+      'Phase 1: Test doctor login and verify appointments display',
+      'Phase 2: Test family member booking flow E2E',
+      'Phase 3: Integrate Daily.co for video consultations',
+      'Phase 4: Add Claude Vision OCR for prescription parsing',
+      'Phase 5: Enable Razorpay live mode for payments'
+    ],
+    recentDecisions: [
+      'Daily.co or 100ms.live recommended for video (HIPAA-ready, React SDK, free 10K mins/mo)',
+      'Turso over SQLite file - edge database with libSQL adapter (Dec 28, 2025)',
+      'Cloud Run over DO droplet - auto-scaling, asia-south1 region (Dec 28, 2025)',
+      'Cloudflare Pages over Vercel - already have CF account, free tier sufficient'
     ]
   },
   {
