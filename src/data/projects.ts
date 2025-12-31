@@ -294,47 +294,55 @@ The output feeds into alumni directory pages, enabling filtering and grouping by
     id: 'mycliniq',
     name: 'MyCliniQ',
     status: 'Active',
-    description: 'Telemedicine platform with patient/doctor dashboards, appointments, prescriptions. Deployed on Cloud Run + Cloudflare Pages + Turso.',
+    description: 'Telemedicine platform - BETA READY. Video consultations, prescriptions, family booking all working. Deployed on Cloud Run + Cloudflare Pages + Turso.',
     detailedDescription: `A comprehensive telemedicine platform enabling patients to book video/audio consultations with doctors, manage health records, and track prescriptions. Built as a full-stack application with role-based dashboards.
 
 **Architecture:**
 - Frontend: React + TypeScript + Tailwind + shadcn/ui on Cloudflare Pages
 - Backend: Express + Prisma on GCP Cloud Run (asia-south1)
 - Database: Turso (SQLite-compatible edge database)
+- Storage: Cloudflare R2 for documents
+- Video: 100ms.live for consultations
 - Auth: JWT tokens with bcrypt password hashing
 
-**Working Features:**
-- Patient dashboard with health score, quick actions, upcoming appointments
-- Doctor dashboard with patient list, consultation workflow
-- Appointment booking with date/time selection
+**Working Features (Beta Ready):**
+- Patient dashboard with health score, appointments, quick actions
+- Doctor dashboard with patient queue, schedule management
+- Video consultations via 100ms.live (HMSPrebuilt)
+- Appointment booking with Razorpay payment (test mode)
 - Family member management (add dependents, book for family)
-- Login/register with role selection (Patient/Doctor)
+- Indian prescription format with PDF generation
+- Doctor self-signup with multi-step wizard
+- Lab test workflow (request → upload → view)
+- Document upload to Cloudflare R2
+- Chat messaging between patient/doctor
+- Nutritional assessment (24-hour dietary recall)
+- Consultation notes and diagnosis
 
-**Key Tables:** users, doctor_profiles, patient_profiles, appointments, prescriptions, documents, family_members, lab_tests, notifications
+**Key Tables:** users, doctor_profiles, patient_profiles, appointments, prescriptions, medications, documents, family_members, lab_tests, notifications, nutritional_assessments
 
 **Deployment Commands:**
-- Backend: gcloud run deploy mycliniq-backend --source backend --region asia-south1
-- Frontend: npx wrangler pages deploy dist --project-name=mycliniq-frontend
+- Backend: cd backend && npm run build && cd .. && gcloud run deploy mycliniq-backend --source backend --region asia-south1
+- Frontend: npm run build && npx wrangler pages deploy dist --project-name=mycliniq-frontend
 - Seed DB: node backend/seed-turso.js (with TURSO env vars)`,
-    lastTouched: '2025-12-28',
-    techStack: ['React', 'TypeScript', 'Express', 'Prisma', 'Turso', 'GCP Cloud Run', 'Cloudflare Pages', 'Tailwind'],
-    prodUrl: 'https://mycliniq-frontend.pages.dev',
+    lastTouched: '2025-12-31',
+    techStack: ['React', 'TypeScript', 'Express', 'Prisma', 'Turso', 'GCP Cloud Run', 'Cloudflare Pages', 'Tailwind', '100ms.live', 'Cloudflare R2'],
+    prodUrl: 'https://master.mycliniq-frontend.pages.dev',
     localPath: '/Users/rajeshpanchanathan/code/myCliniq',
     itermProfile: 'mycliniq',
-    currentStatus: 'Production deployed. Login + patient dashboard + appointments working. Document upload broken (needs cloud storage). Video consultations not implemented.',
+    currentStatus: 'BETA READY. All core features working: video consultations, prescriptions, family booking, lab tests, document upload. E2E tested. Razorpay in test mode.',
     nextSteps: [
-      'Phase 1: Fix document upload (switch multer disk → Cloudflare R2)',
-      'Phase 1: Test doctor login and verify appointments display',
-      'Phase 2: Test family member booking flow E2E',
-      'Phase 3: Integrate Daily.co for video consultations',
-      'Phase 4: Add Claude Vision OCR for prescription parsing',
-      'Phase 5: Enable Razorpay live mode for payments'
+      'Enable Razorpay live mode for real payments',
+      'Add email notifications (SMTP2GO)',
+      'Add Claude Vision OCR for prescription parsing',
+      'Production hardening - error handling, edge cases',
+      'Add push notifications'
     ],
     recentDecisions: [
-      'Daily.co or 100ms.live recommended for video (HIPAA-ready, React SDK, free 10K mins/mo)',
-      'Turso over SQLite file - edge database with libSQL adapter (Dec 28, 2025)',
-      'Cloud Run over DO droplet - auto-scaling, asia-south1 region (Dec 28, 2025)',
-      'Cloudflare Pages over Vercel - already have CF account, free tier sufficient'
+      '100ms.live for video - HMSPrebuilt zero-config UI, free 10K mins/mo (Dec 28, 2025)',
+      'Cloudflare R2 for document storage - S3-compatible, free egress (Dec 28, 2025)',
+      'Indian prescription format with clinic header, Rx table, signature (Dec 31, 2025)',
+      'Doctor self-signup to allow organic growth (Dec 31, 2025)'
     ]
   },
   {
