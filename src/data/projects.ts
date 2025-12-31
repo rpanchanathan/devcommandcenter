@@ -28,22 +28,23 @@ export const projects: Project[] = [
 The portal handles the complete post-enrollment journey: document collection (ID proofs, medical forms), payment tracking with Razorpay integration, and real-time sync with FreshSales CRM. A webhook system automatically updates parent records when deals close, ensuring data consistency across systems.
 
 Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, and automated email notifications for key milestones.`,
-    lastTouched: '2025-12-03',
+    lastTouched: '2025-12-31',
     techStack: ['React', 'TypeScript', 'Supabase', 'GCP Cloud Run'],
     prodUrl: 'https://parent.genwise.in',
     githubUrl: 'https://github.com/rpanchanathan/genwise-post-sales-portal',
     localPath: '/Users/rajeshpanchanathan/code/post-sales',
     itermProfile: 'post-sales',
-    currentStatus: 'Course name bug RESOLVED. Webhook now uses deal.products[0].name. 4 students fixed. Cloud Scheduler paused.',
+    currentStatus: 'Admin portal enhanced: payment stats dashboard (₹18L total, ₹7L collected), staff filtering (13 real parents), payment history bug fixed. Revision 00051.',
     nextSteps: [
-      'Manual sync available: npx tsx scripts/sync-course-names.ts --fix',
-      'Wait for trial/test parents to share portal experience',
-      'Augment "Support a Child" tab - waiting for Eklavya collateral',
-      'Build out "Digital Archive" tab'
+      'CSV export for Students/Parents tables',
+      'PDF export for Medical Details form',
+      'PDF export for Terms & Conditions',
+      'Augment "Support a Child" tab - waiting for Eklavya collateral'
     ],
     recentDecisions: [
-      'Course names from products[0].name, not custom fields (Dec 3, 2025)',
-      'Cloud Scheduler paused - root cause fixed, nightly sync unnecessary'
+      'Fixed payment history FK join bug - PostgREST PGRST200 on created_by (Dec 31, 2025)',
+      'Staff filtered from admin stats/tables via admin_users exclusion (Dec 31, 2025)',
+      'Payment stats added to admin dashboard (Dec 31, 2025)'
     ]
   },
   {
