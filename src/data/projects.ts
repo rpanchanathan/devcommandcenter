@@ -535,5 +535,23 @@ Built with React + Vite + TypeScript + Tailwind CSS. Data sourced from WhatsApp 
       'Moved from bushwalkbirds to websites folder (Jan 1, 2026)',
       'Hash-based routing instead of React Router for GitHub Pages compatibility'
     ]
+  },
+  {
+    id: 'social-media-posts',
+    name: 'Social Media Posts',
+    status: 'Active',
+    description: 'Social media content tracking for GenWise - Club GW threads, campaigns, scheduling.',
+    lastTouched: '2026-01-01',
+    techStack: ['Python', 'Google Sheets API'],
+    localPath: '/Users/rajeshpanchanathan/code/social-media-posts',
+    itermProfile: 'social-media-posts',
+    currentStatus: 'Sheet created with 13 Club GW threads, all messages drafted.',
+    nextSteps: [
+      'Schedule first batch of posts',
+      'Add campaign tracking for other GenWise content'
+    ],
+    recentDecisions: [
+      'Google Sheet for tracking (not Notion) - simpler, OAuth already configured (Jan 1, 2026)'
+    ]
   }
 ];
