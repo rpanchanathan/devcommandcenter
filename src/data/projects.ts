@@ -526,14 +526,14 @@ Built with React + Vite + TypeScript + Tailwind CSS. Data sourced from WhatsApp 
     githubUrl: 'https://github.com/GenWise/clubgw',
     localPath: '/Users/rajeshpanchanathan/code/websites/clubgw',
     itermProfile: 'clubgw',
-    currentStatus: 'Live with 13 threads, shareable URLs, proper GenWise branding.',
+    currentStatus: 'Live with 13 threads, path-based shareable URLs with OG meta tags for social sharing.',
     nextSteps: [
-      'Add OG meta tags for Twitter/social sharing',
-      'Extract more threads as community grows'
+      'Extract more threads as community grows',
+      'Create thread-specific images for social previews'
     ],
     recentDecisions: [
-      'Moved from bushwalkbirds to websites folder (Jan 1, 2026)',
-      'Hash-based routing instead of React Router for GitHub Pages compatibility'
+      'Path-based URLs (/threads/slug/) for social sharing - hash URLs don\'t work with OG tags (Jan 1, 2026)',
+      'Moved from bushwalkbirds to websites folder (Jan 1, 2026)'
     ]
   },
   {
