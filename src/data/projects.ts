@@ -499,5 +499,31 @@ Modified candidate_chat.py to handle the upload filename pattern (Name-hash.pdf)
       'Separate repo from production SKCH to avoid confusion (Dec 24, 2025)',
       'Modified candidate_chat.py for upload filename pattern (Name-hash.pdf)'
     ]
+  },
+  {
+    id: 'clubgw',
+    name: 'Club GW Showcase',
+    status: 'Active',
+    description: 'Marketing showcase for Club GW parent community - displays curated WhatsApp conversation threads.',
+    detailedDescription: `A React showcase site displaying curated conversation threads from Club GW, the private GenWise community WhatsApp group for GSP students, alumni, and mentors.
+
+Features 13 real discussion threads spanning Economics, Philosophy, Mathematics, Physics, Chemistry, Biology, History, and Engineering. Each thread is rendered in a WhatsApp-style UI with reactions and timestamps.
+
+Built with React + Vite + TypeScript + Tailwind CSS. Data sourced from WhatsApp group via whatsapp-mcp bridge, stored as static JSON. Hash-based routing enables shareable URLs per thread.`,
+    lastTouched: '2026-01-01',
+    techStack: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'GitHub Pages'],
+    prodUrl: 'https://clubgw.genwise.in',
+    githubUrl: 'https://github.com/GenWise/clubgw',
+    localPath: '/Users/rajeshpanchanathan/code/websites/clubgw',
+    itermProfile: 'clubgw',
+    currentStatus: 'Live with 13 threads, shareable URLs, proper GenWise branding.',
+    nextSteps: [
+      'Add OG meta tags for Twitter/social sharing',
+      'Extract more threads as community grows'
+    ],
+    recentDecisions: [
+      'Moved from bushwalkbirds to websites folder (Jan 1, 2026)',
+      'Hash-based routing instead of React Router for GitHub Pages compatibility'
+    ]
   }
 ];
