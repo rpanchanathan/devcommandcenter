@@ -375,21 +375,31 @@ The tool solves the "where did I put that API key?" problem without requiring a 
 
 The pattern emerged from WordPress.com's aggressive CSS stripping on direct HTML posts. Static pages are developed locally with full styling control, pushed to GitHub Pages for hosting, then embedded in WordPress pages via iframe. This achieves pixel-perfect Figma designs without WordPress Business plan costs.
 
-Includes TNP365 landing page with a Flask-based form submission API on Digital Ocean. Forms submit to the API, which sends emails via SMTP2GO (bypassing DO's SMTP port blocking) and logs submissions. The architecture supports adding new pages without WordPress constraints.`,
-    lastTouched: '2025-12-04',
-    techStack: ['HTML', 'CSS', 'GitHub Pages', 'Python', 'Flask', 'SMTP2GO'],
+**TNP365 Express Interest Form Backend:**
+- Endpoint: POST https://tnp-form.genwise.in/tnp365-interest
+- Service: /root/apps/tnp365-form/app.py (Flask + flask_cors)
+- Port: 5002, managed by systemd (tnp365-form.service)
+- Nginx: /etc/nginx/sites-available/tnp-form (proxy to port 5002)
+- Email: SMTP2GO API (bypasses DO's blocked SMTP ports), sends to tnp@genwise.in from rajesh@genwise.in
+- API Key: SMTP2GO_API_KEY in systemd Environment directive
+
+Form captures: Parent Name, Child Name, Email, Phone, Grade (6-12), Subject Interest (Science/Math/Both).`,
+    lastTouched: '2026-01-01',
+    techStack: ['HTML', 'CSS', 'GitHub Pages', 'Python', 'Flask', 'SMTP2GO', 'Nginx'],
     prodUrl: 'https://genwise.in/tnp365',
     githubUrl: 'https://github.com/GenWise/static-pages',
     localPath: '/Users/rajeshpanchanathan/code/websites/static-pages',
     itermProfile: 'websites',
-    currentStatus: 'TNP365 form now auto-sends emails via SMTP2GO API (no more mailto). API at tnp-form.genwise.in on DO droplet.',
+    currentStatus: 'TNP365 fully polished: 5 school logos + 1 placeholder, 8 mentor photos + 4 initials placeholders, thinner nav (44px), Express Interest form with SMTP2GO backend.',
     nextSteps: [
-      'Monitor form submissions in siddharth@genwise.in inbox',
-      'Add more static pages as needed'
+      'Source missing mentor photos (Dhanya K, Siddharth Bharath, Vidhya Govindan, Kanchana Suryakumar)',
+      'Source Sanskriti The Gurukul school logo',
+      'Monitor form submissions at tnp@genwise.in'
     ],
     recentDecisions: [
-      'Form API on DO droplet + SMTP2GO instead of mailto - reliable delivery (Dec 4, 2025)',
-      'WordPress.com strips CSS - use GitHub Pages + iframe pattern instead (Nov 12, 2025)'
+      'SMTP2GO API for form emails - bypasses DO SMTP port blocking via HTTPS (Jan 1, 2026)',
+      'Use Instructor Photos folder not Mentors - Mentors has profile cards with text overlays (Jan 1, 2026)',
+      'Nav bar 44px height (from 64px) - thinner to reduce clutter with WordPress dual-nav (Jan 1, 2026)'
     ]
   },
   {
