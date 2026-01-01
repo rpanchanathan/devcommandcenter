@@ -447,6 +447,34 @@ Content includes program philosophy, daily schedule, admissions process, and pho
     ]
   },
   {
+    id: 'whatsapp-workflows',
+    name: 'WhatsApp Workflows',
+    status: 'Active',
+    description: 'Personal automation repo for WhatsApp MCP integrations. Media download, video creation, message automation.',
+    detailedDescription: `A personal automation toolkit for WhatsApp via MCP (Model Context Protocol). Enables Claude to interact with WhatsApp for reading messages, downloading media, and sending messages/files.
+
+The repo consolidates patterns for WhatsApp automation including:
+- Sequential media download workflow (parallel downloads overwrite due to timestamp-based filenames)
+- Video creation with ffmpeg Ken Burns effects, text overlays, and background music
+- Portrait vs landscape image handling for video creation
+- Royalty-free music sourcing from incompetech.com
+
+First project: Bird Screensaver - extracted 15 bird images from "The BushWalk Trust" WhatsApp group and created video screensavers for macOS and Windows with Ken Burns zoom effect, bird names, credits, and Satie's Gymnopédie No. 1 as background music.`,
+    lastTouched: '2026-01-01',
+    techStack: ['WhatsApp MCP', 'ffmpeg', 'Python', 'Bash'],
+    localPath: '/Users/rajeshpanchanathan/code/whatsapp-workflows',
+    itermProfile: 'whatsapp-workflows',
+    currentStatus: 'Initial setup complete. CLAUDE.md with full WhatsApp MCP documentation, bird-screensaver project documented.',
+    nextSteps: [
+      'Add more automation scripts as needed',
+      'Document additional WhatsApp groups in group_jids.md'
+    ],
+    recentDecisions: [
+      'Sequential downloads required - MCP uses timestamp for filename, parallel downloads overwrite (Jan 1, 2026)',
+      'Portrait images need top-crop (crop_y: 0) for bird photos - center-crop cuts off faces (Jan 1, 2026)'
+    ]
+  },
+  {
     id: 'teacherhire-demo',
     name: 'TeacherHire Demo',
     status: 'Active',
