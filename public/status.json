@@ -7,9 +7,9 @@
       "lastSuccess": "2026-01-07T08:02:07Z"
     },
     "pre-sales": {
-      "health": "healthy",
-      "message": "Sync service running",
-      "lastCheck": "2026-01-07T08:06:54Z",
+      "health": "error",
+      "message": "Failed: https://dashboard.giftedworld.org",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
       "lastSuccess": "2026-01-07T08:06:54Z"
     },
     "pv-reviews": {
@@ -20,51 +20,51 @@
     },
     "post-sales": {
       "health": "healthy",
-      "message": "Portal running",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "ei-ats": {
-      "health": "healthy",
-      "message": "Daily scrape complete",
-      "lastCheck": "2026-01-07T06:00:00Z",
+      "health": "error",
+      "message": "Failed: https://internalapps.giftedworld.org/ei-ats",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
       "lastSuccess": "2026-01-07T06:00:00Z"
     },
     "gsp26-chatbot": {
       "health": "healthy",
-      "message": "Chatbot responding",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "resume-screening": {
       "health": "healthy",
-      "message": "Service running",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "teacherhire-demo": {
       "health": "healthy",
-      "message": "Demo available",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "websites": {
       "health": "healthy",
-      "message": "Pages deployed",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "mycliniq": {
       "health": "healthy",
-      "message": "Beta running",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "clubgw": {
       "health": "healthy",
-      "message": "Site deployed",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "youtube-mcp": {
       "health": "healthy",
@@ -74,9 +74,9 @@
     },
     "chimplyfun": {
       "health": "healthy",
-      "message": "Site live",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "bridge": {
       "health": "healthy",
@@ -86,9 +86,9 @@
     },
     "devcommandcenter": {
       "health": "healthy",
-      "message": "Dashboard running",
-      "lastCheck": "2026-01-07T10:00:00Z",
-      "lastSuccess": "2026-01-07T10:00:00Z"
+      "message": "OK",
+      "lastCheck": "2026-01-07T11:22:08.649764Z",
+      "lastSuccess": "2026-01-07T11:22:08.649764Z"
     },
     "whatsapp-workflows": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-01-07T09:00:02Z"
+  "lastUpdated": "2026-01-07T11:22:08.649764Z"
 }
