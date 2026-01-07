@@ -1,9 +1,9 @@
 {
   "projects": {
     "zoom-extraction": {
-      "health": "healthy",
-      "message": "Last run successful",
-      "lastCheck": "2026-01-07T04:30:00Z",
+      "health": "error",
+      "message": "Test error - disk space issue",
+      "lastCheck": "2026-01-07T08:01:48Z",
       "lastSuccess": "2026-01-07T04:30:00Z"
     },
     "pre-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-01-07T10:00:00Z"
+  "lastUpdated": "2026-01-07T08:01:48Z"
 }
