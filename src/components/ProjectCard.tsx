@@ -1,13 +1,16 @@
 import { Link } from 'react-router';
 import { StatusBadge } from './StatusBadge';
 import { QuickLinks } from './QuickLinks';
+import { HealthIndicator } from './HealthIndicator';
 import type { Project } from '../data/projects';
+import type { ProjectHealth } from '../hooks/useProjectHealth';
 
 interface ProjectCardProps {
   project: Project;
+  health?: ProjectHealth;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, health }: ProjectCardProps) {
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
     const now = new Date();
@@ -25,9 +28,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <div className="bg-[#161b22] border border-gray-800 rounded-lg p-4 hover:border-gray-700 transition-all hover:shadow-lg group">
       <Link to={`/project/${project.id}`} className="block mb-3">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="text-gray-100 group-hover:text-[#3399ff] transition-colors">
-            {project.name}
-          </h3>
+          <div className="flex items-center gap-2">
+            {health && <HealthIndicator health={health} size="sm" />}
+            <h3 className="text-gray-100 group-hover:text-[#3399ff] transition-colors">
+              {project.name}
+            </h3>
+          </div>
           <StatusBadge status={project.status} />
         </div>
         <p className="text-gray-400 text-sm mb-3">{project.description}</p>

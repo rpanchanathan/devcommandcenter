@@ -1,0 +1,131 @@
+{
+  "projects": {
+    "zoom-extraction": {
+      "health": "healthy",
+      "message": "Last run successful",
+      "lastCheck": "2026-01-07T04:30:00Z",
+      "lastSuccess": "2026-01-07T04:30:00Z"
+    },
+    "pre-sales": {
+      "health": "healthy",
+      "message": "Hourly sync running",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "pv-reviews": {
+      "health": "healthy",
+      "message": "Cron job active",
+      "lastCheck": "2026-01-07T06:00:00Z",
+      "lastSuccess": "2026-01-07T06:00:00Z"
+    },
+    "post-sales": {
+      "health": "healthy",
+      "message": "Portal running",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "ei-ats": {
+      "health": "healthy",
+      "message": "Daily scrape complete",
+      "lastCheck": "2026-01-07T06:00:00Z",
+      "lastSuccess": "2026-01-07T06:00:00Z"
+    },
+    "gsp26-chatbot": {
+      "health": "healthy",
+      "message": "Chatbot responding",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "resume-screening": {
+      "health": "healthy",
+      "message": "Service running",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "teacherhire-demo": {
+      "health": "healthy",
+      "message": "Demo available",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "websites": {
+      "health": "healthy",
+      "message": "Pages deployed",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "mycliniq": {
+      "health": "healthy",
+      "message": "Beta running",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "clubgw": {
+      "health": "healthy",
+      "message": "Site deployed",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "youtube-mcp": {
+      "health": "healthy",
+      "message": "MCP server ready",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "chimplyfun": {
+      "health": "healthy",
+      "message": "Site live",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "bridge": {
+      "health": "healthy",
+      "message": "Local dev ready",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "devcommandcenter": {
+      "health": "healthy",
+      "message": "Dashboard running",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "whatsapp-workflows": {
+      "health": "healthy",
+      "message": "Workflows ready",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "social-media-posts": {
+      "health": "healthy",
+      "message": "Tracking active",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "faces": {
+      "health": "healthy",
+      "message": "Local tool ready",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "obsidian": {
+      "health": "healthy",
+      "message": "Integration ready",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "skch": {
+      "health": "healthy",
+      "message": "Archive complete",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    },
+    "schoolname": {
+      "health": "healthy",
+      "message": "Mapping complete",
+      "lastCheck": "2026-01-07T10:00:00Z",
+      "lastSuccess": "2026-01-07T10:00:00Z"
+    }
+  },
+  "lastUpdated": "2026-01-07T10:00:00Z"
+}

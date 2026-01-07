@@ -1,12 +1,23 @@
 import { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { ProjectCard } from '../components/ProjectCard';
+import { HealthAlertBanner } from '../components/HealthIndicator';
+import { useProjectHealth } from '../hooks/useProjectHealth';
 import { projects } from '../data/projects';
 import type { ProjectStatus } from '../data/projects';
 
 export function Summary() {
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<ProjectStatus | 'All'>('All');
+  const { getHealth, getErrorCount, getWarningCount, getProjectsWithIssues } = useProjectHealth();
+
+  // Map project IDs to names for the alert banner
+  const projectNames = useMemo(() => {
+    return projects.reduce((acc, p) => {
+      acc[p.id] = p.name;
+      return acc;
+    }, {} as Record<string, string>);
+  }, []);
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -63,6 +74,14 @@ export function Summary() {
           </div>
         </header>
 
+        {/* Health Alert Banner */}
+        <HealthAlertBanner
+          errorCount={getErrorCount()}
+          warningCount={getWarningCount()}
+          projectsWithIssues={getProjectsWithIssues()}
+          projectNames={projectNames}
+        />
+
         {/* Search and Filters */}
         <div className="mb-6 space-y-4">
           <div className="relative">
@@ -99,7 +118,7 @@ export function Summary() {
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <ProjectCard key={project.id} project={project} health={getHealth(project.id)} />
             ))}
           </div>
         ) : (
