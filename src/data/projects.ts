@@ -56,10 +56,9 @@ Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for da
 
 Form submissions trigger Google Apps Scripts that normalize data and append to a Master Google Sheet. A Node.js service running on Digital Ocean (via PM2) performs hourly syncs to FreshSales CRM, creating contacts and deals with proper lifecycle stages. Slack notifications alert the sales team of new leads in real-time.
 
-The system includes duplicate detection, lead source attribution, and automatic field mapping. A dashboard at dashboard.giftedworld.org provides visibility into pipeline health and conversion metrics.`,
+The system includes duplicate detection, lead source attribution, and automatic field mapping.`,
     lastTouched: '2025-12-03',
     techStack: ['Node.js', 'Google Sheets API', 'FreshSales API', 'Google Apps Script', 'PM2'],
-    prodUrl: 'https://dashboard.giftedworld.org',
     githubUrl: 'https://github.com/GenWise/pre-sales-monitoring',
     localPath: '/Users/rajeshpanchanathan/code/pre-sales-monitoring',
     itermProfile: 'pre-sales',
@@ -124,10 +123,10 @@ All assets are uploaded to organized Google Drive folders with consistent naming
 
 The Node.js service scrapes the official EI ATS registration portal daily, extracting seat availability, registration counts by center, and capacity utilization. Data is cached in JSON files for fast dashboard rendering, with historical snapshots enabling trend analysis.
 
-The Express-based dashboard at internalapps.giftedworld.org displays key metrics with color-coded capacity indicators. GenWise uses this to time their promotional campaigns around registration windows and identify high-demand centers for targeted outreach.`,
+The Express-based dashboard at ats-status.giftedworld.org displays key metrics with color-coded capacity indicators. GenWise uses this to time their promotional campaigns around registration windows and identify high-demand centers for targeted outreach.`,
     lastTouched: '2025-11-15',
     techStack: ['Node.js', 'Express', 'JSON cache', 'PM2'],
-    prodUrl: 'https://internalapps.giftedworld.org/ei-ats',
+    prodUrl: 'https://ats-status.giftedworld.org',
     localPath: '/Users/rajeshpanchanathan/code/ei-ats-status',
     itermProfile: 'ei-ats',
     currentStatus: 'Running on DO. Scrapes EI ATS registrations daily, displays metrics.',
