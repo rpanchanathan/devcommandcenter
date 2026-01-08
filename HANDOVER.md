@@ -1,25 +1,25 @@
 # DevCommandCenter - Session Handover
 
 ## Session Metadata
-- Date: 2026-01-07
+- Date: 2026-01-08
 
 ## Current Status
-**Complete.** Health monitoring with WhatsApp alerts deployed.
+**Complete.** Health monitoring running, stale URLs fixed.
 
 ## What Works
 - ✅ Dashboard with 21 projects, search, status filters
-- ✅ Project detail pages with Current Status, Next Steps, Tech Stack
 - ✅ Inline editing of Next Steps (GitHub API commits)
-- ✅ SPA routing on GitHub Pages (404.html redirect)
-- ✅ Auto-deploy via GitHub Actions (~1 min)
-- ✅ **Health Monitoring** (added 2026-01-07):
-  - Checks 11 prodUrls hourly via Mac launchd
+- ✅ **Health Monitoring** (2026-01-07):
+  - Checks 10 prodUrls hourly via Mac launchd
   - WhatsApp alert to 919840970514 on any failure
   - Updates `public/status.json` via GitHub API
-  - Frontend displays health indicators (green/red dots)
   - Script: `~/bin/health-check.py`
   - LaunchAgent: `com.devcommandcenter.health`
 
-## Live URLs
-- Portal: https://rpanchanathan.github.io/devcommandcenter/
-- GitHub: https://github.com/rpanchanathan/devcommandcenter
+## Decisions Made (2026-01-08)
+- **ei-ats URL**: Fixed to `ats-status.giftedworld.org` (was using non-existent path)
+- **pre-sales**: Removed prodUrl (no dashboard exists, backend-only sync service)
+  **Rationale**: dashboard.giftedworld.org was never deployed, only freshsales-sync runs on DO
+
+## Handover Prompt
+"DevCommandCenter health monitoring complete. 10 sites monitored hourly, WhatsApp alerts on failure. To add new monitored site: edit `~/bin/health-check.py` PROJECTS dict, then update `projects.ts` prodUrl."
