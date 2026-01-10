@@ -1,9 +1,9 @@
 {
   "projects": {
     "zoom-extraction": {
-      "health": "healthy",
-      "message": "Extracted 1 sessions",
-      "lastCheck": "2026-01-09T04:30:21Z",
+      "health": "error",
+      "message": "OSError: [Errno 28] No space left on device",
+      "lastCheck": "2026-01-10T04:30:56Z",
       "lastSuccess": "2026-01-09T04:30:21Z"
     },
     "pre-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-01-10T03:45:33.929450Z"
+  "lastUpdated": "2026-01-10T04:30:56Z"
 }
