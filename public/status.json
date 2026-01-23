@@ -14,9 +14,9 @@
     },
     "pv-reviews": {
       "health": "healthy",
-      "message": "Weekly posting completed",
-      "lastCheck": "2026-01-22T16:33:35Z",
-      "lastSuccess": "2026-01-22T16:33:35Z"
+      "message": "Weekly summary sent",
+      "lastCheck": "2026-01-23T03:30:07Z",
+      "lastSuccess": "2026-01-23T03:30:07Z"
     },
     "post-sales": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-01-23T02:45:38.526234Z"
+  "lastUpdated": "2026-01-23T03:30:07Z"
 }
