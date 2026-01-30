@@ -487,24 +487,28 @@ First project: Bird Screensaver - extracted 15 bird images from "The BushWalk Tr
     id: 'teacherhire-demo',
     name: 'TeacherHire Demo',
     status: 'Active',
-    description: 'Demo version of teacher screening app for sales demos. Rebranded, 12 sample candidates.',
+    description: 'Demo version of teacher screening app for sales demos. 16 anonymized candidates, SKCH-style design.',
     detailedDescription: `A demonstration version of the SKCH teacher screening tool, rebranded for generic "Teacher Screening" use cases. Built for sales demos to showcase AI-powered candidate evaluation without exposing actual SKCH data.
 
-The demo runs at teacherhire.genwise.in with 12 hand-picked candidates from the 2026 batch across 6 subjects (Biology, Chemistry, Math, Physics, English, Hindi). Each candidate has complete data: application forms, CVs, AI-generated narratives, qualification extraction, and school history.
+The demo runs at teacherhire.genwise.in with 16 fully anonymized candidates from the 2025 batch across 4 subjects (Biology, Chemistry, Math, Physics) representing all decision types (GREEN/AMBER/RED). All real teacher names replaced with fake Indian names, PII anonymized. Includes 76-candidate Excel file with SKCH→SCHOOL replacements for spreadsheet demos.
+
+Professional SKCH-style bordered card design. Each candidate has complete data: application forms, CVs, AI-generated narratives, qualification extraction, and school history. Fixed critical bug where batch year defaulted to 2026 showing 0 candidates.
 
 Modified candidate_chat.py to handle the upload filename pattern (Name-hash.pdf) used by batch uploads. Hosted on the same DO droplet as production but with separate systemd service (port 8502) and nginx config.`,
-    lastTouched: '2025-12-24',
+    lastTouched: '2026-01-30',
     techStack: ['Python', 'Streamlit', 'Claude API', 'Digital Ocean'],
     prodUrl: 'https://teacherhire.genwise.in',
     githubUrl: 'https://github.com/GenWise/teacherhire-demo',
     localPath: '/Users/rajeshpanchanathan/code/skch/teacherhire-demo',
     itermProfile: 'teacherhire-demo',
-    currentStatus: 'Live demo with 12 candidates. Form/CV links working, Quals/Schools displaying.',
+    currentStatus: 'Fully anonymized with 16 candidates + Excel file. All features verified working.',
     nextSteps: [
-      'Test demo flow before sales call',
-      'Add more candidates if needed'
+      'Ready for sales demos'
     ],
     recentDecisions: [
+      'Anonymize all 206 real teacher names → 16 representative candidates (Jan 30, 2026)',
+      'Fix batch year default bug (2026→2025) to prevent 0 candidates display (Jan 30, 2026)',
+      'Apply SKCH-style bordered card design matching original work (Jan 30, 2026)',
       'Separate repo from production SKCH to avoid confusion (Dec 24, 2025)',
       'Modified candidate_chat.py for upload filename pattern (Name-hash.pdf)'
     ]
