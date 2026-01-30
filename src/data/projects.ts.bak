@@ -557,39 +557,4 @@ Built with React + Vite + TypeScript + Tailwind CSS. Data sourced from WhatsApp 
       'Google Sheet for tracking (not Notion) - simpler, OAuth already configured (Jan 1, 2026)'
     ]
   }
-,
-  {
-    id: 'mmm-chatbot',
-    name: 'MMM Chatbot',
-    status: 'Active',
-    description: 'AI chatbot for My Misconception Mentor landing page. Claude Haiku, D1 analytics, Cloudflare Pages.',
-    detailedDescription: `An AI-powered chatbot embedded on the My Misconception Mentor (MMM) teacher development program landing page at genwise.in/my-misconception-mentor. Built with React + Vite + Tailwind, uses Claude 3.5 Haiku with full program context. Features session tracking, D1 analytics, post-processing for brevity, and password-protected dashboard.`,
-    lastTouched: '2026-01-30',
-    techStack: ['React', 'TypeScript', 'Claude API', 'Cloudflare Pages', 'Cloudflare Workers', 'Cloudflare D1', 'Vite', 'Tailwind'],
-    prodUrl: 'https://genwise.in/my-misconception-mentor/',
-    localPath: '/Users/rajeshpanchanathan/code/websites/genwise/MMM',
-    itermProfile: 'mmm-chatbot',
-    currentStatus: 'Live on genwise.in. AI-powered with Claude Haiku, D1 analytics tracking, 500+ teachers, 99% completion.',
-    nextSteps: [
-      'Monitor chatbot interactions via dashboard',
-      'Adjust prompts based on user questions'
-    ]
-  },
-  {
-    id: 'chatbot-analytics',
-    name: 'Chatbot Analytics',
-    status: 'Active',
-    description: 'Analytics dashboard for all chatbot interactions. Tracks Q&A, sessions, response times across chatbots.',
-    detailedDescription: `Centralized analytics dashboard tracking chatbot interactions across GenWise chatbots. Password-protected Cloudflare Pages Function at /dashboard querying D1 database. Features stats cards, search/filter, CSV export, session tracking, and device analytics. Multi-chatbot ready.`,
-    lastTouched: '2026-01-30',
-    techStack: ['TypeScript', 'Cloudflare Pages Functions', 'Cloudflare D1', 'HTML/CSS'],
-    prodUrl: 'https://85f62322.misconception-mentor.pages.dev/dashboard?password=genwise2026',
-    localPath: '/Users/rajeshpanchanathan/code/websites/genwise/MMM',
-    itermProfile: 'mmm-chatbot',
-    currentStatus: 'Live with password protection. Tracking MMM chatbot, ready for multiple chatbots.',
-    nextSteps: [
-      'Add date range filtering',
-      'Add conversation threading view'
-    ]
-  }
 ];
