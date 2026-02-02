@@ -13,9 +13,9 @@
       "lastSuccess": "2026-02-02T12:00:02Z"
     },
     "pv-reviews": {
-      "health": "warning",
-      "message": "Some errors in recent runs",
-      "lastCheck": "2026-02-02T09:00:01Z",
+      "health": "error",
+      "message": "Collection failed with 2 errors",
+      "lastCheck": "2026-02-02T17:30:06Z",
       "lastSuccess": "2026-01-30T03:30:09Z"
     },
     "post-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-02-02T17:18:53.649318Z"
+  "lastUpdated": "2026-02-02T17:30:06Z"
 }
