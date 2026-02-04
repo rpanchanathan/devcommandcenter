@@ -3,7 +3,7 @@
     "zoom-extraction": {
       "health": "error",
       "message": "Script exited with code 1",
-      "lastCheck": "2026-02-03T04:30:05Z",
+      "lastCheck": "2026-02-04T04:30:05Z",
       "lastSuccess": "2026-01-09T04:30:21Z"
     },
     "pre-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-02-04T03:30:48.414922Z"
+  "lastUpdated": "2026-02-04T04:30:05Z"
 }
