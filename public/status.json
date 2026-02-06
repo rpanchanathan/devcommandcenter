@@ -2,8 +2,8 @@
   "projects": {
     "zoom-extraction": {
       "health": "error",
-      "message": "Script exited with code 1",
-      "lastCheck": "2026-02-05T04:30:04Z",
+      "message": "OSError: [Errno 28] No space left on device",
+      "lastCheck": "2026-02-06T04:35:12Z",
       "lastSuccess": "2026-01-09T04:30:21Z"
     },
     "pre-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-02-06T03:48:10.098002Z"
+  "lastUpdated": "2026-02-06T04:35:12Z"
 }
