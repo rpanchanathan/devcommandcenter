@@ -591,5 +591,55 @@ Built with React + Vite + TypeScript + Tailwind CSS. Data sourced from WhatsApp 
       'Add date range filtering',
       'Add conversation threading view'
     ]
+  },
+  {
+    id: 'sundara',
+    name: 'Sundara Foundation Website',
+    status: 'Active',
+    description: 'Non-profit website for Sundara Foundation. React + Vite + Tailwind, Figma Make generated, Vercel hosted.',
+    detailedDescription: `A single-page website for Sundara Foundation, a non-profit organization. Built using Figma Make to generate React + Vite code with Tailwind CSS styling.
+
+The site features sections for the foundation's mission, programs, team, and contact information. Designed with a warm, approachable aesthetic appropriate for a charitable organization.
+
+Hosted on Vercel with automatic deployments from GitHub. Domain managed via GoDaddy DNS.`,
+    lastTouched: '2026-02-06',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Vercel'],
+    prodUrl: 'https://sundaratrust.org',
+    githubUrl: 'https://github.com/rpanchanathan/sundara',
+    localPath: '/Users/rajeshpanchanathan/code/websites/sundara/site',
+    itermProfile: 'sundara',
+    currentStatus: 'Live on sundaratrust.org. Figma Make generated, Vercel hosted.',
+    nextSteps: [
+      'Content updates as needed'
+    ]
+  },
+  {
+    id: 'avalokiteshwara',
+    name: 'Avalokiteshwara Counselling',
+    status: 'Active',
+    description: 'Psychological counselling website for Vishnu Agnihotri. React + Vite + Tailwind, serene Buddhist-inspired design.',
+    detailedDescription: `A single-page counselling practice website for Vishnu Agnihotri (GenWise co-founder). Named after Avalokiteshwara, the bodhisattva of compassion, reflecting the attentive, non-judgmental listening approach of counselling.
+
+Features:
+- Hero section with ethereal Avalokiteshwara imagery
+- "Who Needs Counselling?" section breaking stigma
+- "My Approach" section on therapeutic philosophy
+- About section with credentials and meditation background
+- Contact CTA with free session offer
+
+Design aesthetic: Serene, contemplative with soft teals, misty blues, and warm whites. Built with React + Vite + Tailwind, Figma Make generated. Framer Motion for gentle animations.
+
+Hosted on Vercel with avalokiteshwara.in domain via GoDaddy DNS.`,
+    lastTouched: '2026-02-07',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
+    prodUrl: 'https://avalokiteshwara.in',
+    githubUrl: 'https://github.com/rpanchanathan/avalokiteshwara',
+    localPath: '/Users/rajeshpanchanathan/code/websites/avalokiteswara',
+    itermProfile: 'avalokiteshwara',
+    currentStatus: 'Live on avalokiteshwara.in. Sent to Vishnu for feedback.',
+    nextSteps: [
+      'Incorporate Vishnu feedback',
+      'Add Calendly booking when ready'
+    ]
   }
 ];
