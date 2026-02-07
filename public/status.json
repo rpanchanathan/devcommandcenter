@@ -21,50 +21,50 @@
     "post-sales": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "ei-ats": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "gsp26-chatbot": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "resume-screening": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "teacherhire-demo": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "websites": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "mycliniq": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "clubgw": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "youtube-mcp": {
       "health": "healthy",
@@ -75,7 +75,7 @@
     "chimplyfun": {
       "health": "error",
       "message": "Failed: https://chimplyfun.com",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
       "lastSuccess": "2026-02-06T13:50:59.521256Z"
     },
     "bridge": {
@@ -87,8 +87,8 @@
     "devcommandcenter": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-02-07T03:55:56.347489Z",
-      "lastSuccess": "2026-02-07T03:55:56.347489Z"
+      "lastCheck": "2026-02-07T04:56:15.136918Z",
+      "lastSuccess": "2026-02-07T04:56:15.136918Z"
     },
     "whatsapp-workflows": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-02-07T04:31:28Z"
+  "lastUpdated": "2026-02-07T04:56:15.136918Z"
 }
