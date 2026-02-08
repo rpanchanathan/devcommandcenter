@@ -3,7 +3,7 @@
     "zoom-extraction": {
       "health": "error",
       "message": "OSError: [Errno 28] No space left on device",
-      "lastCheck": "2026-02-07T04:31:28Z",
+      "lastCheck": "2026-02-08T04:32:41Z",
       "lastSuccess": "2026-01-09T04:30:21Z"
     },
     "pre-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-02-08T04:03:33.680449Z"
+  "lastUpdated": "2026-02-08T04:32:41Z"
 }
