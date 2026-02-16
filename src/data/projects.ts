@@ -15,6 +15,7 @@ export interface Project {
   currentStatus: string;
   nextSteps: string[];
   recentDecisions?: string[];
+  docs?: { name: string; path: string }[];
 }
 
 export const projects: Project[] = [
@@ -29,24 +30,41 @@ The portal handles the complete post-enrollment journey: document collection (ID
 
 Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, and automated email notifications for key milestones.
 
+**Documentation:** \`docs/\` folder contains:
+- [RISKS.md](docs/RISKS.md) - Security vulnerabilities & risk assessment
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) - System design & technical debt
+- [USER-JOURNEYS.md](docs/USER-JOURNEYS.md) - Complete user flows with entry/exit points
+- [EDGE-CASES.md](docs/EDGE-CASES.md) - Error handling & recovery procedures
+- [UX-IMPROVEMENTS.md](docs/UX-IMPROVEMENTS.md) - UI/UX enhancement opportunities
+
 **Backups:** Supabase daily automatic backups (~00:30 IST), 7-day retention. Manual backup script: \`npx tsx scripts/backup-tables.ts\`. PITR not enabled.`,
     lastTouched: '2026-02-16',
+    docs: [
+      { name: 'Risks', path: 'docs/RISKS.md' },
+      { name: 'Architecture', path: 'docs/ARCHITECTURE.md' },
+      { name: 'User Journeys', path: 'docs/USER-JOURNEYS.md' },
+      { name: 'Edge Cases', path: 'docs/EDGE-CASES.md' },
+      { name: 'UX Improvements', path: 'docs/UX-IMPROVEMENTS.md' }
+    ],
     techStack: ['React', 'TypeScript', 'Supabase', 'GCP Cloud Run'],
     prodUrl: 'https://parent.genwise.in',
     githubUrl: 'https://github.com/rpanchanathan/genwise-post-sales-portal',
     localPath: '/Users/rajeshpanchanathan/code/post-sales',
     itermProfile: 'post-sales',
-    currentStatus: 'Admin portal enhanced: payment stats dashboard (₹18L total, ₹7L collected), staff filtering (13 real parents), payment history bug fixed. Revision 00051.',
+    currentStatus: 'Production stable. 350+ parents, Razorpay + Freshsales webhooks working. Comprehensive audit completed Feb 16.',
     nextSteps: [
-      'CSV export for Students/Parents tables',
-      'PDF export for Medical Details form',
-      'PDF export for Terms & Conditions',
-      'Augment "Support a Child" tab - waiting for Eklavya collateral'
+      'Add Freshsales webhook signature verification (CRITICAL)',
+      'Fix /forgot-password (implement or remove)',
+      'Add auto-save for forms',
+      'Add toast notifications for save/error feedback',
+      'Add webhook logging to database',
+      'Build admin UI for feature flags',
+      'Add first-login onboarding flow'
     ],
     recentDecisions: [
-      'Fixed payment history FK join bug - PostgREST PGRST200 on created_by (Dec 31, 2025)',
-      'Staff filtered from admin stats/tables via admin_users exclusion (Dec 31, 2025)',
-      'Payment stats added to admin dashboard (Dec 31, 2025)'
+      'Comprehensive audit completed - docs/RISKS.md, docs/ARCHITECTURE.md created (Feb 16, 2026)',
+      'Freshsales webhook URL changed to direct Cloud Run - bypasses Cloudflare blocking (Feb 2, 2026)',
+      'Won Deal filter enabled - only creates students from Won deals (Jan 16, 2026)'
     ]
   },
   {
