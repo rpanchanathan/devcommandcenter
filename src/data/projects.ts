@@ -27,8 +27,10 @@ export const projects: Project[] = [
 
 The portal handles the complete post-enrollment journey: document collection (ID proofs, medical forms), payment tracking with Razorpay integration, and real-time sync with FreshSales CRM. A webhook system automatically updates parent records when deals close, ensuring data consistency across systems.
 
-Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, and automated email notifications for key milestones.`,
-    lastTouched: '2025-12-31',
+Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, and automated email notifications for key milestones.
+
+**Backups:** Supabase daily automatic backups (~00:30 IST), 7-day retention. Manual backup script: \`npx tsx scripts/backup-tables.ts\`. PITR not enabled.`,
+    lastTouched: '2026-02-16',
     techStack: ['React', 'TypeScript', 'Supabase', 'GCP Cloud Run'],
     prodUrl: 'https://parent.genwise.in',
     githubUrl: 'https://github.com/rpanchanathan/genwise-post-sales-portal',
