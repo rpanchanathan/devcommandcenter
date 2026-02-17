@@ -22,13 +22,13 @@ export const projects: Project[] = [
   {
     id: 'post-sales',
     name: 'Post-Sales Portal',
-    status: 'Active',
-    description: 'Parent portal for GSP 2025 - multi-tab forms, document uploads, payment integration, CRM sync.',
+    status: 'Maintenance',
+    description: 'Parent portal for GSP 2026 - feature-complete, maintenance mode until GSP 2027.',
     detailedDescription: `A comprehensive parent portal that serves as the primary touchpoint for GenWise Summer Program families after enrollment. Parents access personalized dashboards showing their child's course details, batch schedules, and program information.
 
 The portal handles the complete post-enrollment journey: document collection (ID proofs, medical forms), payment tracking with Razorpay integration, and real-time sync with FreshSales CRM. A webhook system automatically updates parent records when deals close, ensuring data consistency across systems.
 
-Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, and automated email notifications for key milestones.
+Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for data persistence. Features include multi-child support, document upload with validation, auto-save for forms, and automated email notifications for key milestones.
 
 **Documentation:** \`docs/\` folder contains:
 - [RISKS.md](docs/RISKS.md) - Security vulnerabilities & risk assessment
@@ -38,7 +38,7 @@ Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for da
 - [UX-IMPROVEMENTS.md](docs/UX-IMPROVEMENTS.md) - UI/UX enhancement opportunities
 
 **Backups:** Supabase daily automatic backups (~00:30 IST), 7-day retention. Manual backup script: \`npx tsx scripts/backup-tables.ts\`. PITR not enabled.`,
-    lastTouched: '2026-02-16',
+    lastTouched: '2026-02-17',
     docs: [
       { name: 'Risks', path: 'docs/RISKS.md' },
       { name: 'Architecture', path: 'docs/ARCHITECTURE.md' },
@@ -51,20 +51,15 @@ Built with React/TypeScript frontend on GCP Cloud Run, backed by Supabase for da
     githubUrl: 'https://github.com/rpanchanathan/genwise-post-sales-portal',
     localPath: '/Users/rajeshpanchanathan/code/post-sales',
     itermProfile: 'post-sales',
-    currentStatus: 'Production stable. 350+ parents, Razorpay + Freshsales webhooks working. Comprehensive audit completed Feb 16.',
+    currentStatus: 'Feature-complete, maintenance mode. 350+ parents served. All forms working with auto-save, webhooks secured, exports functional.',
     nextSteps: [
-      'Add Freshsales webhook signature verification (CRITICAL)',
-      'Fix /forgot-password (implement or remove)',
-      'Add auto-save for forms',
-      'Add toast notifications for save/error feedback',
-      'Add webhook logging to database',
-      'Build admin UI for feature flags',
-      'Add first-login onboarding flow'
+      'Revisit Sep 2026 for GSP 2027 prep'
     ],
     recentDecisions: [
-      'Comprehensive audit completed - docs/RISKS.md, docs/ARCHITECTURE.md created (Feb 16, 2026)',
-      'Freshsales webhook URL changed to direct Cloud Run - bypasses Cloudflare blocking (Feb 2, 2026)',
-      'Won Deal filter enabled - only creates students from Won deals (Jan 16, 2026)'
+      'Marked maintenance mode - feature-complete for current scale (Feb 17, 2026)',
+      'Auto-save added to all forms with 2s debounce (Feb 16, 2026)',
+      'Webhook security: shared secret verification enabled (Feb 16, 2026)',
+      'Comprehensive audit completed - docs/RISKS.md, docs/ARCHITECTURE.md created (Feb 16, 2026)'
     ]
   },
   {
