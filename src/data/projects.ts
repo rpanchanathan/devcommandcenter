@@ -275,7 +275,7 @@ Claude Sonnet generates professional 3-4 line narratives for each candidate, hig
     prodUrl: 'https://skchscreen.genwise.in',
     localPath: '/Users/rajeshpanchanathan/code/skch/resume_processing',
     itermProfile: 'resume-screening',
-    currentStatus: 'Live on DO. 129 candidates processed. Sonnet uses pre_computed as authoritative source, multi-board awareness.',
+    currentStatus: 'Live on DO since Dec 2025. 1,571 CVs processed across 63 sessions. Peak: 1,000 CVs on Dec 22-23.',
     nextSteps: [
       'Supplement missing form fields from Vision CV',
       'Monitor Sonnet narrative accuracy',
