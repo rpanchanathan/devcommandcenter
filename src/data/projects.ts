@@ -656,5 +656,28 @@ Hosted on Vercel with avalokiteshwara.in domain via GoDaddy DNS.`,
       'Incorporate Vishnu feedback',
       'Add Calendly booking when ready'
     ]
+  },
+  {
+    id: 'cm',
+    name: 'Content Management',
+    status: 'Active',
+    description: 'Unified content library for GenWise marketing collateral - videos, clips, transcripts, posting workflow.',
+    detailedDescription: `A content management system for organizing GenWise marketing materials including program videos, testimonial clips, transcripts, and social media posting workflow.
+
+Features Kanban board for content posts (idea → draft → scheduled → posted), video library with Google Drive links, timestamped clips with searchable tags, and PostgreSQL full-text search.
+
+Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase (PostgreSQL). Hosted on Cloudflare Pages with custom domain.`,
+    lastTouched: '2026-02-20',
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Supabase', 'Cloudflare Pages'],
+    prodUrl: 'https://cm.genwise.in',
+    githubUrl: 'https://github.com/GenWise/cm',
+    localPath: '/Users/rajeshpanchanathan/code/CM',
+    itermProfile: 'cm',
+    currentStatus: 'MVP deployed. Programs, Videos, Clips CRUD, Content Posts Kanban, PostgreSQL FTS.',
+    nextSteps: [
+      'Import M3 testimonial videos',
+      'Add YouTube/WhatsApp posting integration',
+      'Connect GitHub for auto-deploy'
+    ]
   }
 ];
