@@ -661,23 +661,32 @@ Hosted on Vercel with avalokiteshwara.in domain via GoDaddy DNS.`,
     id: 'cm',
     name: 'Content Management',
     status: 'Active',
-    description: 'Unified content library for GenWise marketing collateral - videos, clips, transcripts, posting workflow.',
+    description: 'Unified content library for GenWise marketing collateral - videos, clips, transcripts, posting workflow with Twitter auto-posting.',
     detailedDescription: `A content management system for organizing GenWise marketing materials including program videos, testimonial clips, transcripts, and social media posting workflow.
 
 Features Kanban board for content posts (idea → draft → scheduled → posted), video library with Google Drive links, timestamped clips with searchable tags, and PostgreSQL full-text search.
 
-Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase (PostgreSQL). Hosted on Cloudflare Pages with custom domain.`,
+**Twitter Auto-posting:** Scheduled posts auto-publish via cron job on DO droplet. Supports @mentions (tag people), thread replies (URLs in continuations to avoid engagement penalties).
+
+Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase (PostgreSQL). Scheduled poster runs on Digital Ocean droplet.
+
+**MCP:** supabase-cm configured in ~/.claude.json for direct DB access.`,
     lastTouched: '2026-02-20',
-    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Supabase', 'Cloudflare Pages'],
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind', 'Supabase', 'Python', 'Tweepy'],
     prodUrl: 'https://cm.genwise.in',
     githubUrl: 'https://github.com/GenWise/cm',
     localPath: '/Users/rajeshpanchanathan/code/CM',
     itermProfile: 'cm',
-    currentStatus: 'MVP deployed. Programs, Videos, Clips CRUD, Content Posts Kanban, PostgreSQL FTS.',
+    currentStatus: 'MVP deployed. Twitter auto-posting with mentions & threads. List view default.',
     nextSteps: [
-      'Import M3 testimonial videos',
-      'Add YouTube/WhatsApp posting integration',
-      'Connect GitHub for auto-deploy'
+      'Deploy updated scheduled_poster.py to DO droplet',
+      'Test thread posting workflow',
+      'Add YouTube/WhatsApp posting integration'
+    ],
+    recentDecisions: [
+      'Added mentions (@handles) and thread support for Twitter (Feb 20, 2026)',
+      'Default to list view for posts, kanban for drag-drop (Feb 20, 2026)',
+      'Removed 280-char truncation - GenWise has Twitter Blue (Feb 20, 2026)'
     ]
   }
 ];
