@@ -90,19 +90,28 @@ The system includes duplicate detection, lead source attribution, and automatic 
     description: 'Google Reviews automation for Paati Veedu restaurant. Scrapes reviews, generates AI responses, posts to GMB.',
     detailedDescription: `An automated reputation management system for Paati Veedu, a family restaurant. The system monitors Google Business Profile for new reviews and generates contextually appropriate AI responses.
 
-A Python script runs on Digital Ocean cron, scraping new reviews via unofficial GMB APIs. Each review is analyzed for sentiment and key themes (food quality, service, ambiance). Claude API generates personalized responses that acknowledge specific feedback while maintaining the restaurant's warm, family-oriented voice.
+**Stats (as of Feb 2026):**
+- 📊 Total reviews collected: 528
+- ✅ Responses posted: 489 (93% response rate)
+- 🤖 Fully automated weekly cycle
 
-Responses are queued for human approval via email (SMTP2GO), then auto-posted to Google. Review data is stored in Supabase for trend analysis. The system has handled 200+ reviews with consistent 4.5+ star maintenance.`,
-    lastTouched: '2025-11-20',
-    techStack: ['Python', 'Supabase', 'Claude API', 'SMTP2GO'],
+A Python script runs on Digital Ocean cron (Mon 11PM collection, Thu 10PM posting). Each review is analyzed for sentiment and key themes. Claude API generates personalized responses maintaining the restaurant's warm, family-oriented voice.
+
+4★/5★ reviews auto-approve; 1-3★ queue for human review via web UI at port 8080. Review data stored in Supabase PostgreSQL. Email alerts sent via SMTP2GO.
+
+**Self-Sustaining System:** The only manual intervention required is regenerating Google backup codes every ~5 weeks. An email alert (with login credentials) is sent when only 1 code remains. Otherwise, the system runs autonomously.`,
+    lastTouched: '2026-02-21',
+    techStack: ['Python', 'Playwright', 'Supabase', 'Claude API', 'SMTP2GO', 'PM2'],
     githubUrl: 'https://github.com/rpanchanathan/PV_Reviews',
     localPath: '/Users/rajeshpanchanathan/Library/Mobile Documents/com~apple~CloudDocs/Documents/Documents - Mac/PythonWork/PV_Reviews',
     itermProfile: 'pv-reviews',
-    currentStatus: 'Running on DO cron. Auto-responds to new reviews with AI-generated responses.',
+    currentStatus: '528 reviews processed, 489 responses posted. Self-sustaining except backup codes (~5 weeks). Mon/Thu cron on DO.',
     nextSteps: [
-      'Add sentiment analysis dashboard',
-      'Implement response templates by rating',
-      'Clean up 4GB log files'
+      'Regenerate backup codes when email alert received (~late March 2026)'
+    ],
+    recentDecisions: [
+      'Backup code alert at ≤1 remaining with email containing URL + credentials (Feb 21, 2026)',
+      'Unified authentication via src/utils/google_auth.py for collector, poster, backup regeneration (Oct 2025)'
     ]
   },
   {
