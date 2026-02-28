@@ -705,6 +705,7 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
     description: 'Scratch space for GenAI experiments, prototypes, and explorations using Claude, OpenAI, Gemini, and other LLM APIs.',
     lastTouched: '2026-02-28',
     techStack: ['Python', 'Claude API', 'OpenAI API'],
+    githubUrl: 'https://github.com/GenWise/genai',
     localPath: '/Users/rajeshpanchanathan/code/genai',
     itermProfile: 'genai',
     currentStatus: 'New project - exploration and prototyping workspace.',
