@@ -697,5 +697,19 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
       'Default to list view for posts, kanban for drag-drop (Feb 20, 2026)',
       'Removed 280-char truncation - GenWise has Twitter Blue (Feb 20, 2026)'
     ]
+  },
+  {
+    id: 'genai',
+    name: 'GenAI Experiments',
+    status: 'Active',
+    description: 'Scratch space for GenAI experiments, prototypes, and explorations using Claude, OpenAI, Gemini, and other LLM APIs.',
+    lastTouched: '2026-02-28',
+    techStack: ['Python', 'Claude API', 'OpenAI API'],
+    localPath: '/Users/rajeshpanchanathan/code/genai',
+    itermProfile: 'genai',
+    currentStatus: 'New project - exploration and prototyping workspace.',
+    nextSteps: [
+      'Define first experiment or prototype'
+    ]
   }
 ];
