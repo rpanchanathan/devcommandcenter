@@ -9,8 +9,8 @@
     "pre-sales": {
       "health": "healthy",
       "message": "Sync service running",
-      "lastCheck": "2026-03-04T00:00:03Z",
-      "lastSuccess": "2026-03-04T00:00:03Z"
+      "lastCheck": "2026-03-04T06:00:03Z",
+      "lastSuccess": "2026-03-04T06:00:03Z"
     },
     "pv-reviews": {
       "health": "warning",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-03-04T04:30:14Z"
+  "lastUpdated": "2026-03-04T06:00:03Z"
 }
