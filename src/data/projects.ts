@@ -712,5 +712,21 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
     nextSteps: [
       'Define first experiment or prototype'
     ]
+  },
+  {
+    id: 'switchboard',
+    name: 'Switchboard',
+    status: 'Active',
+    description: 'Electron-based GUI command center for managing Claude Code CLI sessions — browse, launch, resume, and monitor sessions across projects.',
+    lastTouched: '2026-03-26',
+    techStack: ['Electron', 'Node.js', 'SQLite', 'JavaScript', 'CodeMirror'],
+    githubUrl: 'https://github.com/doctly/switchboard',
+    localPath: '/Users/rajeshpanchanathan/code/switchboard',
+    itermProfile: 'switchboard',
+    currentStatus: 'Installed and running. Launch with: cd ~/code/switchboard && npm run electron',
+    nextSteps: [
+      'Explore session management and diff viewer features',
+      'Set up as default Claude Code session manager'
+    ]
   }
 ];
