@@ -3,8 +3,8 @@
     "zoom-extraction": {
       "health": "healthy",
       "message": "Extracted 0 sessions",
-      "lastCheck": "2026-04-09T04:31:25Z",
-      "lastSuccess": "2026-04-09T04:31:25Z"
+      "lastCheck": "2026-04-10T04:30:17Z",
+      "lastSuccess": "2026-04-10T04:30:17Z"
     },
     "pre-sales": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-04-10T03:43:10.982137Z"
+  "lastUpdated": "2026-04-10T04:30:17Z"
 }
