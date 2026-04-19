@@ -2,9 +2,9 @@
   "projects": {
     "zoom-extraction": {
       "health": "healthy",
-      "message": "Extracted 13 sessions",
-      "lastCheck": "2026-04-18T04:34:21Z",
-      "lastSuccess": "2026-04-18T04:34:21Z"
+      "message": "Extracted 0 sessions",
+      "lastCheck": "2026-04-19T04:30:16Z",
+      "lastSuccess": "2026-04-19T04:30:16Z"
     },
     "pre-sales": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-04-19T04:21:47.706230Z"
+  "lastUpdated": "2026-04-19T04:30:16Z"
 }
