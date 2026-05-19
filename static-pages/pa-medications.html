@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pa — Medication Tracker</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 2rem; background: #f8f9fa; color: #1a1a1a; }
+  h1 { font-size: 1.4rem; margin-bottom: 0.3rem; }
+  .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+  table { border-collapse: collapse; width: 100%; max-width: 800px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  th, td { padding: 0.5rem 0.75rem; text-align: center; border: 1px solid #ddd; font-size: 0.85rem; }
+  th { background: #063852; color: #fff; font-weight: 600; }
+  td:first-child { text-align: left; font-weight: 500; }
+  td:nth-child(2) { text-align: right; color: #666; }
+  td[contenteditable]:focus { outline: 2px solid #3399ff; background: #fffde7; }
+  tr:nth-child(even) { background: #f5f7fa; }
+  .new { background: #e8f5e9 !important; }
+  .replaced { background: #fff3e0 !important; }
+  .note { color: #b71c1c; font-weight: 600; font-size: 0.75rem; }
+  .tag { display: inline-block; font-size: 0.65rem; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
+  .tag-new { background: #c8e6c9; color: #2e7d32; }
+  .tag-replaced { background: #ffe0b2; color: #e65100; }
+  .tag-flag { background: #ffcdd2; color: #b71c1c; }
+  .legend { margin-top: 1rem; font-size: 0.8rem; color: #555; max-width: 800px; }
+  .legend span { margin-right: 1.2rem; }
+  .notes-section { margin-top: 1.5rem; max-width: 800px; font-size: 0.85rem; line-height: 1.6; }
+  .notes-section h2 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .notes-section ul { padding-left: 1.2rem; }
+  .notes-section li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+
+<h1>Pa — Medication Tracker</h1>
+<p class="subtitle">Dosing: Morning – Afternoon – Night (1 = taken, 0 = skipped, ½ = half tablet)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Medication</th>
+      <th>Dose</th>
+      <th>Sep 22</th>
+      <th>Sep 25</th>
+      <th>Apr 2026</th>
+    </tr>
+  </thead>
+  <tbody contenteditable="true">
+    <tr>
+      <td>Thyronorm</td>
+      <td>50 mcg</td>
+      <td>1-0-0</td>
+      <td>1-0-0</td>
+      <td>1-0-1</td>
+    </tr>
+    <tr>
+      <td>Febuxostat</td>
+      <td>40 mg</td>
+      <td>1-0-0</td>
+      <td>1-0-0</td>
+      <td>0-1-0</td>
+    </tr>
+    <tr>
+      <td>Nodosis (Sod. Bi Carb)</td>
+      <td>500 mg</td>
+      <td>1-0-1</td>
+      <td>1-0-1</td>
+      <td>1-0-1</td>
+    </tr>
+    <tr>
+      <td>Linagliptin</td>
+      <td>5 mg</td>
+      <td>1-0-0</td>
+      <td>1-0-0</td>
+      <td>1-0-0</td>
+    </tr>
+    <tr>
+      <td>Nicorandil</td>
+      <td>10 mg</td>
+      <td>1-0-1</td>
+      <td>1-0-1</td>
+      <td>1-1-0</td>
+    </tr>
+    <tr>
+      <td>Frusemide (Lasix)</td>
+      <td>20 mg</td>
+      <td>1-0-1</td>
+      <td>1-1-0</td>
+      <td>1-1-0</td>
+    </tr>
+    <tr>
+      <td>Clopidogrel</td>
+      <td>75 mg</td>
+      <td>0-1-0</td>
+      <td>0-1-0</td>
+      <td>0-1-0</td>
+    </tr>
+    <tr>
+      <td>Cal + Vit D3</td>
+      <td>—</td>
+      <td>0-0-1</td>
+      <td>0-1-0</td>
+      <td>0-1-0</td>
+    </tr>
+    <tr>
+      <td>Eplerenone</td>
+      <td>25 mg</td>
+      <td>2-0-1</td>
+      <td>0-0-1</td>
+      <td>0-1-0</td>
+    </tr>
+    <tr>
+      <td>Atorvastatin</td>
+      <td>40 mg</td>
+      <td>0-0-1</td>
+      <td>0-0-1</td>
+      <td>0-0-1</td>
+    </tr>
+    <tr>
+      <td>Nefrosave (NAC)</td>
+      <td>150 mg</td>
+      <td>1-0-1</td>
+      <td>1-0-0</td>
+      <td>1-0-1</td>
+    </tr>
+    <tr class="replaced">
+      <td>Metoprolol <span class="tag tag-replaced">→ Bisoprolol</span></td>
+      <td>25 mg</td>
+      <td>1-0-1</td>
+      <td>0-0-1</td>
+      <td>—</td>
+    </tr>
+    <tr class="replaced">
+      <td>Bisocar (Bisoprolol) <span class="tag tag-replaced">replaces Metoprolol</span></td>
+      <td>2.5 mg</td>
+      <td>—</td>
+      <td>—</td>
+      <td>1-0-0</td>
+    </tr>
+    <tr class="new">
+      <td>NTG <span class="tag tag-flag">prescribed</span></td>
+      <td>2.6 mg</td>
+      <td>—</td>
+      <td>—</td>
+      <td>1-1-0</td>
+    </tr>
+    <tr class="new">
+      <td>Carditrate (Glyceryl Trinitrate) <span class="tag tag-flag">dispensed instead</span></td>
+      <td>2.5 mg</td>
+      <td>—</td>
+      <td>—</td>
+      <td>1-1-0</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="legend">
+  <span>🟧 Beta-blocker swap (Metoprolol → Bisoprolol)</span>
+  <span>🟩 New in Apr 2026</span>
+  <span>🔴 Pharmacy substitution — flag with doctor</span>
+</div>
+
+<div class="notes-section" contenteditable="true">
+  <h2>Notes</h2>
+  <ul>
+    <li><strong>Metoprolol → Bisoprolol:</strong> Bisoprolol 2.5 mg once daily is equivalent to Metoprolol 25 mg twice daily. Better β1-selectivity and 24-hour coverage with a single dose.</li>
+    <li><strong>NTG 2.6 vs Carditrate 2.5:</strong> Doctor prescribed Nitroglycerin 2.6 mg SR (sustained-release); pharmacy dispensed Carditrate (Glyceryl Trinitrate) 2.5 mg instead. Both are nitrates but different drugs — confirm with the prescribing doctor.</li>
+    <li><strong>Frusemide:</strong> Effective dose remains 20 mg. Apr 2026 uses 40 mg tablets halved (20 mg stock unavailable).</li>
+    <li><strong>Thyronorm 1-0-1 in Apr 2026:</strong> Unusual for thyroid medication — typically morning-only on empty stomach. Worth confirming. This is probably an error which we will reinstate only once a day.</li>
+  </ul>
+</div>
+
+</body>
+</html>
