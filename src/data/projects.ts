@@ -733,7 +733,20 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
     id: 'freecc',
     name: 'Free Claude Code',
     status: 'Active',
-    description: 'Local proxy that routes Claude Code CLI to free NVIDIA NIM models — runs Qwen Coder, Mistral Large, DeepSeek V4 via the Claude harness.',
+    description: 'Local proxy that routes Claude Code CLI to free NVIDIA NIM models via the Claude harness. All inference is free.',
+    detailedDescription: `Routes Claude Code model selections to NVIDIA NIM free-tier models:
+
+**Model Mapping (Claude Code → NIM):**
+- **Opus** → Mistral Large 3 675B (\`mistralai/mistral-large-3-675b-instruct-2512\`)
+- **Sonnet** → Qwen3 Coder 480B (\`qwen/qwen3-coder-480b-a35b-instruct\`)
+- **Haiku** → DeepSeek V4 Pro (\`deepseek-ai/deepseek-v4-pro\`)
+- **Default/Fallback** → Nemotron 3 Super 120B (\`nvidia/nemotron-3-super-120b-a12b\`)
+
+**How it works:** fcc-server runs on :8082 as a proxy. Claude Code connects to it instead of Anthropic's API. The proxy translates Anthropic API format to OpenAI-compatible format and routes to NVIDIA NIM. Inference is free (NVIDIA free tier, ~40 req/min).
+
+**Patched for Python 3.13** (upstream requires 3.14 which only has alpha via uv). Patches: relaxed version constraint, fixed \`except X, Y:\` syntax (8 files), added \`from __future__ import annotations\` to all source files.
+
+**Direct Python usage:** Same API key works with OpenAI SDK pointing at \`https://integrate.api.nvidia.com/v1\`. Free inference for any NIM model.`,
     lastTouched: '2026-05-20',
     techStack: ['Python', 'FastAPI', 'NVIDIA NIM', 'uv'],
     githubUrl: 'https://github.com/Alishahryar1/free-claude-code',
@@ -742,7 +755,8 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
     currentStatus: 'Running on Python 3.13 (patched from 3.14 requirement). Proxy on :8082, admin UI at /admin.',
     nextSteps: [
       'Test Qwen Coder 480B for coding tasks',
-      'Evaluate model quality vs native Claude for real workflows'
+      'Evaluate model quality vs native Claude for real workflows',
+      'Try direct Python inference with OpenAI SDK against NIM'
     ]
   }
 ];
