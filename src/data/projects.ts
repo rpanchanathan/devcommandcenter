@@ -728,5 +728,21 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
       'Explore session management and diff viewer features',
       'Set up as default Claude Code session manager'
     ]
+  },
+  {
+    id: 'freecc',
+    name: 'Free Claude Code',
+    status: 'Active',
+    description: 'Local proxy that routes Claude Code CLI to free NVIDIA NIM models — runs Qwen Coder, Mistral Large, DeepSeek V4 via the Claude harness.',
+    lastTouched: '2026-05-20',
+    techStack: ['Python', 'FastAPI', 'NVIDIA NIM', 'uv'],
+    githubUrl: 'https://github.com/Alishahryar1/free-claude-code',
+    localPath: '/Users/rajeshpanchanathan/code/freecc',
+    itermProfile: 'freecc',
+    currentStatus: 'Running on Python 3.13 (patched from 3.14 requirement). Proxy on :8082, admin UI at /admin.',
+    nextSteps: [
+      'Test Qwen Coder 480B for coding tasks',
+      'Evaluate model quality vs native Claude for real workflows'
+    ]
   }
 ];
