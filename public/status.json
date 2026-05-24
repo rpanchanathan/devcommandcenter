@@ -1,10 +1,10 @@
 {
   "projects": {
     "zoom-extraction": {
-      "health": "error",
-      "message": "Script exited with code 1",
-      "lastCheck": "2026-05-23T04:30:04Z",
-      "lastSuccess": "2026-05-22T04:30:39Z"
+      "health": "healthy",
+      "message": "Extracted 9 sessions",
+      "lastCheck": "2026-05-24T04:31:13Z",
+      "lastSuccess": "2026-05-24T04:31:13Z"
     },
     "pre-sales": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-05-24T00:00:04Z"
+  "lastUpdated": "2026-05-24T04:31:13Z"
 }
