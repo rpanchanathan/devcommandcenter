@@ -44,3 +44,9 @@ Personal project portal/dashboard for tracking 14+ GenWise projects. Shows statu
 3. Enter PAT if prompted (see GitHub API Access above)
 4. Modify steps → Save
 5. Auto-commits to GitHub → deploys in ~1 min
+
+## Wiki
+Before cross-project lookups, tool use, or deployment: check `~/wiki/` for patterns and gotchas.
+For questions about other projects: `~/wiki/index.md` → find the project → read it.
+Write back: if you learn something new or find a wiki article wrong, update it before ending the session.
+Full lookup instructions in `~/CLAUDE.md`.

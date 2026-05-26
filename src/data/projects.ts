@@ -758,5 +758,34 @@ Built with React + Vite + TypeScript + Tailwind + shadcn/ui. Backend on Supabase
       'Evaluate model quality vs native Claude for real workflows',
       'Try direct Python inference with OpenAI SDK against NIM'
     ]
+  },
+  {
+    id: 'mycliniq-companion',
+    name: 'myCliniq Companion',
+    status: 'Active',
+    description: 'React Native companion app for myCliniq — syncs wearable health data from Apple HealthKit / Google Health Connect to the myCliniq backend.',
+    detailedDescription: `Thin data pipe that reads health data from the phone's health store and pushes to myCliniq backend. No data viewing UI — patients view everything on app.mycliniq.co.
+
+**What it syncs:** HR, SpO2, Steps, Sleep (with stages), BP, Sugar, Weight, Temperature, ECG.
+
+**Architecture:** Wearable → Phone Health Store → This App → POST /home-readings/batch → myCliniq Backend.
+
+**Screens:** Login (JWT auth), Home (sync button + status). That's it — intentionally minimal.
+
+**Related:** Part of myCliniq Issue #338 (Wearable & Home Device Readings). The web app side is fully shipped — this app is the data pipe that feeds it.`,
+    lastTouched: '2026-05-26',
+    techStack: ['React Native', 'TypeScript', 'HealthKit', 'Health Connect'],
+    githubUrl: 'https://github.com/rpanchanathan/mycliniq-companion',
+    localPath: '/Users/rajeshpanchanathan/code/mycliniq-companion',
+    itermProfile: 'mycliniq-companion',
+    currentStatus: 'Scaffolded — auth, sync service, UI built. Needs native SDK wiring (react-native-health, react-native-health-connect), device testing, app store submission.',
+    nextSteps: [
+      'Install react-native-health + react-native-health-connect native SDKs',
+      'Add HealthKit entitlement in Xcode, Health Connect permissions in AndroidManifest',
+      'Test on physical iOS + Android devices',
+      'Add background sync (BGTaskScheduler / WorkManager)',
+      'Add push notifications (FCM/APNs) for doctor-triggered sync',
+      'Submit to App Store + Play Store'
+    ]
   }
 ];
