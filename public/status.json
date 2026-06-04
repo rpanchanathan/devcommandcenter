@@ -13,10 +13,10 @@
       "lastSuccess": "2026-06-04T06:00:03Z"
     },
     "pv-reviews": {
-      "health": "warning",
-      "message": "Health check found issues",
-      "lastCheck": "2026-06-03T09:00:28Z",
-      "lastSuccess": "2026-06-02T09:00:10Z"
+      "health": "healthy",
+      "message": "All checks passed",
+      "lastCheck": "2026-06-04T09:00:09Z",
+      "lastSuccess": "2026-06-04T09:00:09Z"
     },
     "post-sales": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-06-04T08:09:12.404835Z"
+  "lastUpdated": "2026-06-04T09:00:09Z"
 }
