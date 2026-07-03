@@ -13,9 +13,9 @@
       "lastSuccess": "2026-07-03T06:00:03Z"
     },
     "pv-reviews": {
-      "health": "warning",
-      "message": "Summary email may have failed",
-      "lastCheck": "2026-07-03T03:30:12Z",
+      "health": "error",
+      "message": "Health check found critical issues",
+      "lastCheck": "2026-07-03T09:07:57Z",
       "lastSuccess": "2026-07-01T09:00:09Z"
     },
     "post-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-07-03T09:03:53.328677Z"
+  "lastUpdated": "2026-07-03T09:07:57Z"
 }
