@@ -1,9 +1,9 @@
 {
   "projects": {
     "zoom-extraction": {
-      "health": "healthy",
-      "message": "PAT rotation verify 14:28Z",
-      "lastCheck": "2026-07-06T14:28:30Z",
+      "health": "error",
+      "message": "OSError: [Errno 28] No space left on device",
+      "lastCheck": "2026-07-07T04:31:01Z",
       "lastSuccess": "2026-07-06T14:28:30Z"
     },
     "pre-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-07-07T00:00:03Z"
+  "lastUpdated": "2026-07-07T04:31:01Z"
 }
