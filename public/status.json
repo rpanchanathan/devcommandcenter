@@ -15,7 +15,7 @@
     "pv-reviews": {
       "health": "error",
       "message": "Health check found critical issues",
-      "lastCheck": "2026-08-07T09:07:56Z",
+      "lastCheck": "2026-08-08T09:07:56Z",
       "lastSuccess": "2026-08-05T09:00:10Z"
     },
     "post-sales": {
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-08-08T06:00:02Z"
+  "lastUpdated": "2026-08-08T09:07:56Z"
 }
