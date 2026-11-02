@@ -174,7 +174,7 @@ The FastAPI backend runs on GCP Cloud Run with auto-scaling. The chat widget is 
     techStack: ['Python', 'FastAPI', 'Claude API', 'GCP Cloud Run'],
     localPath: '/Users/rajeshpanchanathan/code/gsp26',
     itermProfile: 'gsp26-chatbot',
-    currentStatus: 'Embedded in WordPress via iframe. Answers parent inquiries about GSP 2026.',
+    currentStatus: 'Chatbot and catalog editor shut down 2026-11-02. Code in private repo GenWise/gsp26.',
     nextSteps: [
       'Push to GitHub',
       'Add conversation analytics',
