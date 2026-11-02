@@ -163,7 +163,7 @@ The Express-based dashboard at ats-status.giftedworld.org displays key metrics w
   {
     id: 'gsp26-chatbot',
     name: 'GSP26 Chatbot',
-    status: 'Active',
+    status: 'Dormant',
     description: 'RAG chatbot for GSP 2026 inquiries. Claude 200K context, no vector DB.',
     detailedDescription: `An AI-powered chatbot that answers parent inquiries about GenWise Summer Program 2026, embedded directly on the program landing page at genwise.in.
 
@@ -172,7 +172,6 @@ Unlike traditional RAG systems, this chatbot leverages Claude's 200K context win
 The FastAPI backend runs on GCP Cloud Run with auto-scaling. The chat widget is embedded in WordPress via iframe, styled to match the GenWise brand. Conversations are logged for analysis, helping identify common parent concerns and content gaps. The bot handles 50+ daily inquiries during peak enrollment season.`,
     lastTouched: '2025-11-20',
     techStack: ['Python', 'FastAPI', 'Claude API', 'GCP Cloud Run'],
-    prodUrl: 'https://genwise.in/gsp-2026-may',
     localPath: '/Users/rajeshpanchanathan/code/gsp26',
     itermProfile: 'gsp26-chatbot',
     currentStatus: 'Embedded in WordPress via iframe. Answers parent inquiries about GSP 2026.',
