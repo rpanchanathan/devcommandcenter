@@ -21,8 +21,8 @@
     "post-sales": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "ei-ats": {
       "health": "error",
@@ -33,8 +33,8 @@
     "gsp26-chatbot": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "resume-screening": {
       "health": "error",
@@ -51,20 +51,20 @@
     "websites": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "mycliniq": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "clubgw": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "youtube-mcp": {
       "health": "healthy",
@@ -75,8 +75,8 @@
     "chimplyfun": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "bridge": {
       "health": "healthy",
@@ -87,8 +87,8 @@
     "devcommandcenter": {
       "health": "healthy",
       "message": "OK",
-      "lastCheck": "2026-11-25T19:08:54.901412Z",
-      "lastSuccess": "2026-11-25T19:08:54.901412Z"
+      "lastCheck": "2026-11-25T20:09:00.536668Z",
+      "lastSuccess": "2026-11-25T20:09:00.536668Z"
     },
     "whatsapp-workflows": {
       "health": "healthy",
@@ -127,5 +127,5 @@
       "lastSuccess": "2026-01-07T10:00:00Z"
     }
   },
-  "lastUpdated": "2026-11-25T19:08:54.901412Z"
+  "lastUpdated": "2026-11-25T20:09:00.536668Z"
 }
